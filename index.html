@@ -7,32 +7,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./style/bootstrap.min.css" />
     <link rel="stylesheet" href="./style/styles.css" />
+    <link
+      href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+      rel="stylesheet"
+    />
     <script src="./scripts/jquery.min.js"></script>
     <script src="./scripts/bootstrap.min.js"></script>
   </head>
   <body>
     <div class="header-div">
       <div class="container">
-        <img class="logo-img" src="./images/BiztriqueLogo.png" />
+        <img class="logo-img" src="./images/BiztriqueLogo.svg" />
+        <div class="search-main">
         <input placeholder="Search" class="search-box" type="text" />
+        <img src="images/search.svg" class="search-image"/>
+        </div>
         <ul class="header-links">
-          <li>Home</li>
+          <li class="selected">Home</li>
           <li>Market</li>
           <li>Events</li>
           <li>Jobs</li>
         </ul>
         <div class="header-user-div">
-          <img class="header-msg-img" src="./images/Messages.png" />
-          <img class="header-not-img" src="./images/Notification.png" />
+          <span id="account-btn">
+            <img class="header-msg-img" src="./images/people.svg" />
+            <span class="status-notify"></span>
+          </span>
+          <span id="calender-btn">
+            <img class="header-msg-img" src="./images/calender.svg" />
+            <span class="status-notify"></span>
+          </span>
+          <span id="messages-btn">
+            <img class="header-msg-img" src="./images/Messages.svg" />
+            <span class="status-notify"></span>
+          </span>
+          <span id="notification-btn">
+            <img class="header-not-img" src="./images/Notification.svg" />
+            <span class="status-notify"></span>
+          </span>
         </div>
       </div>
     </div>
     <div class="container body-container">
-      <div class="col-md-3">
+      <div class="col-md-2">
         <div class="navbar-div">
+          <div class="head-block">
+            <span>Primary Filters</span>
+          </div>
           <ul class="navbar-list">
-            <li>Primary Filters</li>
-            <li>All Activity</li>
+            <li class="selected">All Activity</li>
             <li>General Posts</li>
             <li>Market Posts</li>
             <li>Event Posts</li>
@@ -40,6 +63,569 @@
           </ul>
         </div>
       </div>
+      <div class="col-md-5 post-list">
+        <div class="post-categories  row">
+          <div id="general-post">
+            <span class="fa arrow"></span>General Post
+          </div>
+          <div id="market"><span class="fa arrow"></span>Market</div>
+          <div id="event"><span class="fa arrow"></span>Event</div>
+          <div id="jobs"><span class="fa arrow"></span>Jobs</div>
+          <div id="sub-category">
+            <img class="header-msg-img" src="./images/Sort.svg" />
+            <img
+              class="header-msg-img"
+              src="./images/Filter.svg"
+              id="filter-image"
+            />
+          </div>
+          <div class="col-md-12 filter-list">
+            <div class="col-md-3">
+              <span>Select from</span>
+              <p data-toggle="dropdown" class="dropdown-selected">Anyone</p>
+              <ul class="dropdown-menu">
+                <li class="selected">Anyone</li>
+                <li>MySelf</li>
+                <li>My Network</li>
+                <li>Public</li>
+                <li>Specific source</li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <span>Select date</span>
+              <p data-toggle="dropdown" class="dropdown-selected">Any date</p>
+              <ul class="dropdown-menu">
+                <li class="selected">Any date</li>
+                <li>2018</li>
+                <li>2017</li>
+                <li>2016</li>
+                <li>Select date</li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <span>Select location</span>
+              <p data-toggle="dropdown" class="dropdown-selected">Anywhere</p>
+              <ul class="dropdown-menu">
+                <li class="selected">Anywhere</li>
+                <li>Near me</li>
+                <li>Dubai, United Arab Emirates</li>
+                <li>Karachi, Pakistan</li>
+                <li>Select a location</li>
+              </ul>
+            </div>
+            <div class="col-md-2 advance-filter">
+              <span>Advance</span> <span>Filters</span>
+            </div>
+          </div>
+        </div>
+        <div class="posts row">
+          <div class="post-block col-md-12">
+            <div class="post-block-header">
+              <div class="col-md-8">
+                <div class="user-post-profile-img">
+                  <span class="status-offline"></span>
+                  <img src="images/Rectangle 65.png" />
+                </div>
+                <div class="post-detail">
+                  <p>
+                    <span class="user-name">Name</span>
+                    <span>shared a status</span>
+                  </p>
+                  <span class="designation">Designation-Film</span>
+                  <p>
+                    <img src="images/Public.svg" class="public-post-img" />
+                    <span> Time Posted </span>
+                  </p>
+                </div>
+              </div>
+              <span class="post-option-btn"
+                ><img src="images/Options.svg"
+              /></span>
+            </div>
+            <div class="post-body col-md-12 post-text-only">
+              <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                aliquyam erat, sed diam voluptua. At.
+              </p>
+            </div>
+            <div class="comment-and-like-block">
+              <div class="col-md-4 like-btn">
+                <img src="images/like.svg" /><span>Like</span>
+              </div>
+              <div class="col-md-4 comment-btn">
+                <img src="images/chat.svg" /><span>Comment</span>
+              </div>
+              <div class="col-md-4 share-btn">
+                <img src="images/share.svg" /><span></span><span>Share</span>
+              </div>
+            </div>
+          </div>
+          <div class="post-block col-md-12">
+            <div class="post-block-header">
+              <div class="col-md-8">
+                <div class="user-post-profile-img">
+                  <span class="status-online"></span>
+                  <img src="images/Rectangle 65.png" />
+                </div>
+                <div class="post-detail">
+                  <p>
+                    <span class="user-name">Name</span>
+                    <span>shared a link</span>
+                  </p>
+                  <span class="designation">Designation-Film</span>
+                  <p>
+                    <img src="images/Public.svg" class="public-post-img" />
+                    <span> Time Posted </span>
+                  </p>
+                </div>
+              </div>
+              <span class="post-option-btn"
+                ><img src="images/Options.svg"
+              /></span>
+            </div>
+            <div class="post-body col-md-12  post-external-video">
+              <span class="play-icon"></span>
+              <div class="image-block"><img src="images/post-image.png" /></div>
+              <div class="post-body-detail">
+                <a>Destination URL</a>
+                <p><a class="url-title">Url title comes here</a></p>
+                <a>Url Description comes here</a>
+              </div>
+            </div>
+            <div class="comment-and-like-block">
+              <div class="col-md-4 like-btn">
+                <img src="images/like.svg" /><span>Like</span>
+              </div>
+              <div class="col-md-4 comment-btn">
+                <img src="images/chat.svg" /><span>Comment</span>
+              </div>
+              <div class="col-md-4 share-btn">
+                <img src="images/share.svg" /><span></span><span>Share</span>
+              </div>
+            </div>
+          </div>
+          <div class="post-block col-md-12">
+            <div class="post-block-header">
+              <div class="col-md-8">
+                <div class="user-post-profile-img">
+                  <span class="status-busy"></span>
+                  <img src="images/Rectangle 65.png" />
+                </div>
+                <div class="post-detail">
+                  <p>
+                    <span class="user-name">Name</span>
+                    <span>shared a youtube video</span>
+                  </p>
+                  <span class="designation">Designation-Film</span>
+                  <p>
+                    <img src="images/Public.svg" class="public-post-img" />
+                    <span> Time Posted </span>
+                  </p>
+                </div>
+              </div>
+              <span class="post-option-btn"
+                ><img src="images/Options.svg"
+              /></span>
+            </div>
+            <div class="post-body col-md-12  post-youtube-video">
+              <div class="clearfix_youtube">
+                <div class="col-md-4">
+                  <a
+                    href="https://www.youtube.com/attribution_link?a=r6DBPV9Qdrc&amp;u=%2Fwatch%3Fv%3D66n1DFrmc0Q%26feature%3Dshare&amp;fbclid=IwAR1rYEIq5NydqqW3vU4RL4nMnJYlpIz7N0o_y6sxjpWWNEfRmT0S9g93f1Y"
+                  >
+                    <img src="images/Pohto.jpg" />
+                  </a>
+                </div>
+                <div class="col-md-8 youtube-details">
+                  <a
+                    href="https://www.youtube.com/attribution_link?a=r6DBPV9Qdrc&amp;u=%2Fwatch%3Fv%3D66n1DFrmc0Q%26feature%3Dshare&amp;fbclid=IwAR2ihHcbJECtxn05rPzMkP4nazRHdAyy66oiIvCdwSy9zi4F0LBnpHVxzWo"
+                  >
+                    <span>youtube.com</span>
+                    <p>Build a Wordpress Website In 1 Hour</p>
+                    <span>
+                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                      sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                      magna aliquya...
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="comment-and-like-block">
+              <div class="col-md-4 like-btn">
+                <img src="images/like.svg" /><span>Like</span>
+              </div>
+              <div class="col-md-4 comment-btn">
+                <img src="images/chat.svg" /><span>Comment</span>
+              </div>
+              <div class="col-md-4 share-btn">
+                <img src="images/share.svg" /><span></span><span>Share</span>
+              </div>
+            </div>
+          </div>
+          <div class="post-block col-md-12">
+            <div class="post-block-header">
+              <div class="col-md-8">
+                <div class="user-post-profile-img">
+                  <span class="status-online"></span>
+                  <img src="images/Rectangle 65.png" />
+                </div>
+                <div class="post-detail">
+                  <p>
+                    <span class="user-name">Name</span>
+                    <span>shared a link</span>
+                  </p>
+                  <span class="designation">Designation-Film</span>
+                  <p>
+                    <img src="images/Public.svg" class="public-post-img" />
+                    <span> Time Posted </span>
+                  </p>
+                </div>
+              </div>
+              <span class="post-option-btn"
+                ><img src="images/Options.svg"
+              /></span>
+            </div>
+            <div class="post-body col-md-12  post-external-image">
+              <div class="image-block"><img src="images/sample.jpg" /></div>
+              <div class="post-body-detail">
+                <a>Destination URL</a>
+                <p><a class="url-title">Url title comes here</a></p>
+                <a>Url Description comes here</a>
+              </div>
+            </div>
+            <div class="comment-and-like-block">
+              <div class="col-md-4 like-btn">
+                <img src="images/like.svg" /><span>Like</span>
+              </div>
+              <div class="col-md-4 comment-btn">
+                <img src="images/chat.svg" /><span>Comment</span>
+              </div>
+              <div class="col-md-4 share-btn">
+                <img src="images/share.svg" /><span></span><span>Share</span>
+              </div>
+            </div>
+          </div>
+          <div class="post-block col-md-12">
+            <div class="post-block-header">
+              <div class="col-md-8">
+                <div class="user-post-profile-img">
+                  <span class="status-offline"></span>
+                  <img src="images/Rectangle 65.png" />
+                </div>
+                <div class="post-detail">
+                  <p>
+                    <span class="user-name">Name</span>
+                    <span>shared a link</span>
+                  </p>
+                  <span class="designation">Designation-Film</span>
+                  <p>
+                    <img src="images/Public.svg" class="public-post-img" />
+                    <span> Time Posted </span>
+                  </p>
+                </div>
+              </div>
+              <span class="post-option-btn"
+                ><img src="images/Options.svg"
+              /></span>
+            </div>
+            <div class="post-body col-md-12  post-multiple-images">
+              <p class="post-text-only">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                aliquyam erat, sed diam voluptua. At.
+              </p>
+              <div class="main-block">
+                <div class="image-block col-md-10">
+                  <img src="images/sample.jpg" />
+                </div>
+                <div class="sub-image-block col-md-2">
+                  <img src="images/1.jpg" /><img src="images/2.jpg" /><img
+                    src="images/3.jpg"
+                  />
+                  <img src="images/1.jpg" />
+                  <span class="last-image"
+                    ><span class="images-number">+2</span></span
+                  >
+                </div>
+              </div>
+              <div class="post-body-detail">
+                <a>Destination URL</a>
+                <p><a class="url-title">Url title comes here</a></p>
+                <a>Url Description comes here</a>
+              </div>
+            </div>
+            <div class="comment-and-like-block">
+              <div class="col-md-4 like-btn">
+                <img src="images/like.svg" /><span>Like</span>
+              </div>
+              <div class="col-md-4 comment-btn">
+                <img src="images/chat.svg" /><span>Comment</span>
+              </div>
+              <div class="col-md-4 share-btn">
+                <img src="images/share.svg" /><span></span><span>Share</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 friend-request-block">
+        <div class="main-block col-md-12">
+          <div class="head-block">
+            <span>New friends requests</span>
+            <span class="post-option-btn"><img src="images/Options.svg"/></span>
+          </div>
+          <div class="main-body">
+            <div class="request-user row">
+              <div class="user-post-profile-img">
+                <img src="images/Rectangle 65.png" />
+              </div>
+              <div class="user-detail">
+                <span class="user-name">Gail Murray</span>
+                <p>
+                  Lorem ipsum dolor sit amet, conse tetur sadipscing elitr, sed
+                  diam.
+                </p>
+              </div>
+              <div class="btn-options">
+                <span class="hand-shake">
+                  <img src="images/handshake.png" />
+                </span>
+                <span class="cancel-request">
+                  <span class="fa arrow"></span>
+                </span>
+              </div>
+            </div>
+            <div class="request-user row">
+              <div class="user-post-profile-img">
+                <img src="images/Rectangle 65.png" />
+              </div>
+              <div class="user-detail">
+                <span class="user-name">Gail Murray</span>
+                <p>
+                  Lorem ipsum dolor sit amet, conse tetur sadipscing elitr, sed
+                  diam.
+                </p>
+              </div>
+              <div class="btn-options">
+                <span class="hand-shake">
+                  <img src="images/handshake.png" />
+                </span>
+                <span class="cancel-request">
+                  <span class="fa arrow"></span>
+                </span>
+              </div>
+            </div>
+            <div class="request-user row">
+              <div class="user-post-profile-img">
+                <img src="images/Rectangle 65.png" />
+              </div>
+              <div class="user-detail">
+                <span class="user-name">Gail Murray</span>
+                <p>
+                  Lorem ipsum dolor sit amet, conse tetur sadipscing elitr, sed
+                  diam.
+                </p>
+              </div>
+              <div class="btn-options">
+                <span class="hand-shake">
+                  <img src="images/handshake.png" />
+                </span>
+                <span class="cancel-request">
+                  <span class="fa arrow"></span>
+                </span>
+              </div>
+            </div>
+            <div class="request-user row">
+              <div class="user-post-profile-img">
+                <img src="images/Rectangle 65.png" />
+              </div>
+              <div class="user-detail">
+                <span class="user-name">Gail Murray</span>
+                <p>
+                  Lorem ipsum dolor sit amet, conse tetur sadipscing elitr, sed
+                  diam.
+                </p>
+              </div>
+              <div class="btn-options">
+                <span class="hand-shake">
+                  <img src="images/handshake.png" />
+                </span>
+                <span class="cancel-request">
+                  <span class="fa arrow"></span>
+                </span>
+              </div>
+            </div>
+            <div class="view-all"><span>View All</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2 chat-container">
+        <div class="chat-block">
+            <div class="head-block">
+                <span>My Network(8)</span>
+                <span class="post-option-btn"><img src="images/Options.svg"/></span>
+              </div>
+            <div class="card-body contacts_body">
+                <ui class="contacts">
+                <li>
+                  <div class="d-flex bd-highlight">
+                    <div class="img_cont">
+                      <img src="https://devilsworkshop.org/files/2013/01/enlarged-facebook-profile-picture.jpg" class="rounded-circle user_img">
+                      <span class="online_icon"></span>
+                    </div>
+                    <div class="user_info">
+                      <span>Maryam Naz</span>
+                      <span class="status-online"></span>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="d-flex bd-highlight">
+                    <div class="img_cont">
+                      <img src="https://2.bp.blogspot.com/-8ytYF7cfPkQ/WkPe1-rtrcI/AAAAAAAAGqU/FGfTDVgkcIwmOTtjLka51vineFBExJuSACLcBGAs/s320/31.jpg" class="rounded-circle user_img">
+                      <span class="online_icon offline"></span>
+                    </div>
+                    <div class="user_info">
+                      <span>Sahar Darya</span>
+                      <span class="status-time">1 hr</span>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="d-flex bd-highlight">
+                    <div class="img_cont">
+                      <img src="https://i.pinimg.com/originals/54/6e/6d/546e6d4c6ce4322e6aa3b2f8ca73ac28.jpg" class="rounded-circle user_img">
+                      <span class="online_icon"></span>
+                    </div>
+                    <div class="user_info">
+                      <span>Yolduz Rafi</span>
+                      <span class="status-busy"></span>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="d-flex bd-highlight">
+                    <div class="img_cont">
+                      <img src="http://profilepicturesdp.com/wp-content/uploads/2018/07/sweet-girl-profile-pictures-9.jpg" class="rounded-circle user_img">
+                      <span class="online_icon offline"></span>
+                    </div>
+                    <div class="user_info">
+                      <span>Nargis Hawa</span>
+                      <span class="status-online"></span>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="d-flex bd-highlight">
+                    <div class="img_cont">
+                      <img src="https://www.freshmorningquotes.com/wp-content/uploads/2015/11/cute-and-beautifull-girls-profile-pictures.jpg" class="rounded-circle user_img">
+                      <span class="online_icon offline"></span>
+                    </div>
+                    <div class="user_info">
+                      <span>Khadija Mehr</span>
+                      <span class="status-busy"></span>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                    <div class="d-flex bd-highlight">
+                      <div class="img_cont">
+                        <img src="https://devilsworkshop.org/files/2013/01/enlarged-facebook-profile-picture.jpg" class="rounded-circle user_img">
+                        <span class="online_icon"></span>
+                      </div>
+                      <div class="user_info">
+                        <span>Maryam Naz</span>
+                        <span class="status-online"></span>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="d-flex bd-highlight">
+                      <div class="img_cont">
+                        <img src="https://2.bp.blogspot.com/-8ytYF7cfPkQ/WkPe1-rtrcI/AAAAAAAAGqU/FGfTDVgkcIwmOTtjLka51vineFBExJuSACLcBGAs/s320/31.jpg" class="rounded-circle user_img">
+                        <span class="online_icon offline"></span>
+                      </div>
+                      <div class="user_info">
+                        <span>Sahar Darya</span>
+                        <span class="status-time">1hr</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="d-flex bd-highlight">
+                      <div class="img_cont">
+                        <img src="https://i.pinimg.com/originals/54/6e/6d/546e6d4c6ce4322e6aa3b2f8ca73ac28.jpg" class="rounded-circle user_img">
+                        <span class="online_icon"></span>
+                      </div>
+                      <div class="user_info">
+                        <span>Yolduz Rafi</span>
+                        <span class="status-busy"></span>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="d-flex bd-highlight">
+                      <div class="img_cont">
+                        <img src="http://profilepicturesdp.com/wp-content/uploads/2018/07/sweet-girl-profile-pictures-9.jpg" class="rounded-circle user_img">
+                        <span class="online_icon offline"></span>
+                      </div>
+                      <div class="user_info">
+                        <span>Nargis Hawa</span>
+                        <span class="status-online"></span>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="d-flex bd-highlight">
+                      <div class="img_cont">
+                        <img src="https://www.freshmorningquotes.com/wp-content/uploads/2015/11/cute-and-beautifull-girls-profile-pictures.jpg" class="rounded-circle user_img">
+                        <span class="online_icon offline"></span>
+                      </div>
+                      <div class="user_info">
+                        <span>Khadija Mehr</span>
+                        <span class="status-busy"></span>
+                      </div>
+                    </div>
+                  </li>
+                </ui>
+              </div>
+              <div class="search-block">
+                  <img src="images/search-black.svg" class="search-image"/>
+                  <input type="text" placeholder="Search"/>
+                  <span class="post-option-btn"><img src="images/Options.svg"/></span>
+                </div>
+        </div>
+      </div>
     </div>
+    <script>
+      $(document).ready(function() {
+        $("#filter-image").click(function() {
+          $(".filter-list").slideToggle();
+          $(".filter-list").css({ display: "flex" });
+        });
+        var h = window.innerHeight;
+        v = h - 135;
+        h = h - 130;
+        $(".posts").css({ "max-height": h });
+        $(".contacts_body").css({"max-height":v});
+        $(".filter-list ul li").click(function() {
+          $(this)
+            .siblings()
+            .removeClass("selected");
+          $(this).addClass("selected");
+          $(this)
+            .parent()
+            .siblings(".dropdown-selected")
+            .html("");
+          var value = $(this).html();
+          $(this)
+            .parent()
+            .siblings(".dropdown-selected")
+            .append(value);
+        });
+      });
+    </script>
   </body>
 </html>
