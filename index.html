@@ -7,12 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./style/bootstrap.min.css" />
     <link rel="stylesheet" href="./style/styles.css" />
+    <link rel="stylesheet" href="./style/video-js.css" />
     <link
       href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
       rel="stylesheet"
     />
     <script src="./scripts/jquery.min.js"></script>
     <script src="./scripts/bootstrap.min.js"></script>
+    <script src="./scripts/video.js"></script>
   </head>
   <body>
     <div class="header-div">
@@ -30,11 +32,11 @@
         </ul>
         <div class="header-user-div">
           <span id="account-btn">
-            <img class="header-msg-img" src="./images/people.svg" />
+            <img class="header-msg-img" src="./images/NetworkRequests.svg" />
             <span class="status-notify"></span>
           </span>
           <span id="calender-btn">
-            <img class="header-msg-img" src="./images/calender.svg" />
+            <img class="header-msg-img" src="./images/Calendar.svg" />
             <span class="status-notify"></span>
           </span>
           <span id="messages-btn">
@@ -44,6 +46,9 @@
           <span id="notification-btn">
             <img class="header-not-img" src="./images/Notification.svg" />
             <span class="status-notify"></span>
+          </span>
+          <span id="user-accounts">
+            <img src="images/Group 716.png">
           </span>
         </div>
       </div>
@@ -186,7 +191,15 @@
             </div>
             <div class="post-body col-md-12  post-external-video">
               <span class="play-icon"></span>
-              <div class="image-block"><img src="images/post-image.png" /></div>
+              <div class="image-block"><video id="my-video" class="video-js" controls preload="auto" width="640" height="264"
+                poster="images/post-image.png" data-setup="{}">
+                  <source src="Videos/Sample.mp4" type='video/mp4'>
+                  <source src="MY_VIDEO.webm" type='video/webm'>
+                  <p class="vjs-no-js">
+                    To view this video please enable JavaScript, and consider upgrading to a web browser that
+                    <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                  </p>
+                </video></div>
               <div class="post-body-detail">
                 <a>Destination URL</a>
                 <p><a class="url-title">Url title comes here</a></p>
@@ -370,7 +383,8 @@
           </div>
         </div>
       </div>
-      <div class="col-md-3 friend-request-block">
+      <div class="col-md-3">
+        <div class=" friend-request-block">
         <div class="main-block col-md-12">
           <div class="head-block">
             <span>New friends requests</span>
@@ -457,9 +471,101 @@
                 </span>
               </div>
             </div>
-            <div class="view-all"><span>View All</span></div>
           </div>
+          <div class="view-all"><span>View All</span></div>
         </div>
+      </div>
+      <div class="popular-across-biztrique">
+        <div class="main-block col-md-12">
+          <div class="head-block">
+            <span>Popular across biztriques</span>
+            <span class="post-option-btn"><img src="images/Options.svg"/></span>
+          </div>
+          <div class="main-body">
+            <div class="request-user row">
+              <div class="user-post-profile-img">
+                <img src="images/Rectangle 65.png" />
+              </div>
+              <div class="user-detail">
+                <span class="user-name">Gail Murray</span>
+                <p>
+                  Lorem ipsum dolor sit amet, conse tetur sadipscing elitr, sed
+                  diam.
+                </p>
+              </div>
+              <div class="btn-options">
+                <span class="hand-shake">
+                  <img src="images/handshake.png" />
+                </span>
+                <span class="cancel-request">
+                  <span class="fa arrow"></span>
+                </span>
+              </div>
+            </div>
+            <div class="request-user row">
+              <div class="user-post-profile-img">
+                <img src="images/Rectangle 65.png" />
+              </div>
+              <div class="user-detail">
+                <span class="user-name">Gail Murray</span>
+                <p>
+                  Lorem ipsum dolor sit amet, conse tetur sadipscing elitr, sed
+                  diam.
+                </p>
+              </div>
+              <div class="btn-options">
+                <span class="hand-shake">
+                  <img src="images/handshake.png" />
+                </span>
+                <span class="cancel-request">
+                  <span class="fa arrow"></span>
+                </span>
+              </div>
+            </div>
+            <div class="request-user row">
+              <div class="user-post-profile-img">
+                <img src="images/Rectangle 65.png" />
+              </div>
+              <div class="user-detail">
+                <span class="user-name">Gail Murray</span>
+                <p>
+                  Lorem ipsum dolor sit amet, conse tetur sadipscing elitr, sed
+                  diam.
+                </p>
+              </div>
+              <div class="btn-options">
+                <span class="hand-shake">
+                  <img src="images/handshake.png" />
+                </span>
+                <span class="cancel-request">
+                  <span class="fa arrow"></span>
+                </span>
+              </div>
+            </div>
+            <div class="request-user row">
+              <div class="user-post-profile-img">
+                <img src="images/Rectangle 65.png" />
+              </div>
+              <div class="user-detail">
+                <span class="user-name">Gail Murray</span>
+                <p>
+                  Lorem ipsum dolor sit amet, conse tetur sadipscing elitr, sed
+                  diam.
+                </p>
+              </div>
+              <div class="btn-options">
+                <span class="hand-shake">
+                  <img src="images/handshake.png" />
+                </span>
+                <span class="cancel-request">
+                  <span class="fa arrow"></span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="view-all"><span>View All</span></div>
+        </div>
+      </div>
       </div>
       <div class="col-md-2 chat-container">
         <div class="chat-block">
@@ -605,11 +711,12 @@
           $(".filter-list").slideToggle();
           $(".filter-list").css({ display: "flex" });
         });
-        var h = window.innerHeight;
-        v = h - 135;
+        var h = window.outerHeight;
+        v = h - 130;
         h = h - 130;
         $(".posts").css({ "max-height": h });
         $(".contacts_body").css({"max-height":v});
+        $(".contacts_body").css({"height":v});
         $(".filter-list ul li").click(function() {
           $(this)
             .siblings()

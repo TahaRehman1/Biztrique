@@ -68,25 +68,33 @@ body {
   width: 48px;
 }
 .friend-request-block .user-post-profile-img img,
-.friend-request-block .user-post-profile-img {
+.friend-request-block .user-post-profile-img,
+.popular-across-biztrique .user-post-profile-img img,
+.popular-across-biztrique .user-post-profile-img {
   width: 32px;
 }
-.friend-request-block .main-block {
+.friend-request-block .main-block,
+.popular-across-biztrique .main-block {
   padding: 0;
+  margin-bottom: 20px;
 }
-.friend-request-block .user-name {
+.friend-request-block .user-name,
+.popular-across-biztrique .user-name {
   font-family: Roboto-Medium !important;
   font-size: 12px;
 }
-.friend-request-block .request-user {
+.friend-request-block .request-user,
+.popular-across-biztrique .request-user {
   padding: 8px;
   border-bottom: 0.5px solid #e1e1e1;
   padding-bottom: 0;
   margin: 0;
+  padding-right: 0;
 }
 .friend-request-block .user-detail,
+.popular-across-biztrique .user-detail,
 .user_info {
-  width: 70%;
+  width: 64%;
   float: left;
 }
 .user_info {
@@ -94,6 +102,7 @@ body {
   padding-left: 10px;
 }
 .friend-request-block .head-block,
+.popular-across-biztrique .head-block,
 .chat-block .head-block {
   padding-bottom: 10px;
   padding-top: 10px;
@@ -102,7 +111,8 @@ body {
 .hand-shake img {
   width: 22.98px;
 }
-.friend-request-block p {
+.friend-request-block p,
+.popular-across-biztrique p {
   font-size: 11px !important;
   padding-top: 0 !important;
   margin-bottom: 0;
@@ -110,6 +120,7 @@ body {
 .navbar-div,
 .post-block,
 .friend-request-block .main-block,
+.popular-across-biztrique .main-block,
 .chat-container {
   background: #fff;
   border-radius: 3px;
@@ -217,12 +228,15 @@ body {
 .dropdown-menu li,
 .friend-request-block span,
 .friend-request-block p,
-.chat-block .head-block span {
+.chat-block .head-block span,
+.popular-across-biztrique span,
+.popular-across-biztrique p {
   padding: 10px;
   font-family: Roboto-Light;
   font-size: 12px;
 }
 .friend-request-block .post-option-btn,
+.popular-across-biztrique .post-option-btn,
 .chat-block .post-option-btn {
   top: 0;
   right: 0;
@@ -394,6 +408,7 @@ body {
 .post-detail {
   margin-left: 60px;
   margin-top: 8px;
+  margin-bottom: 8px;
 }
 .img_cont img {
   width: 32px;
@@ -435,18 +450,27 @@ body {
   border: 0.5px solid #e1e1e1;
   border-top: none;
   border-radius: 3px;
+  padding: 3px;
 }
 .btn-options span {
   padding: 0;
-  padding-left: 7px;
+  padding-left: 4px;
 }
 .btn-options {
-  position: absolute;
+  position: relative;
   margin-top: 20px;
   right: 0;
+  width: 22%;
+  float: left;
+}
+.popular-across-biztrique .main-body,
+.friend-request-block .main-body {
+  max-height: 250px;
+  overflow: auto;
 }
 .post-categories .fa.arrow::before,
-.friend-request-block .fa.arrow::before {
+.friend-request-block .fa.arrow::before,
+.popular-across-biztrique .fa.arrow::before {
   content: "x";
   padding-right: 12px;
   font-family: monospace;
@@ -523,6 +547,14 @@ body {
   font-family: Roboto-Light;
   font-size: 12px;
 }
+.vjs-big-play-button {
+  top: 40% !important;
+  left: 40% !important;
+}
+.image-block,
+.my-video-dimensions {
+  max-width: 100%;
+}
 .post-multiple-images .image-block,
 .post-multiple-images .sub-image-block {
   padding: 0;
@@ -549,12 +581,20 @@ body {
 .header-links li.selected {
   font-family: Roboto-Medium;
 }
+#user-accounts {
+  border-left: 0.5px solid #e1e1e1;
+  padding-left: 12px;
+}
+#notification-btn {
+  padding-right: 5px;
+}
 .header-user-div {
   width: auto;
   float: left;
   text-align: right;
   padding: 15px;
-  margin-left: 10%;
+  margin-left: 8%;
+  padding-left: 0;
 }
 .header-msg-img,
 .header-not-img {
