@@ -115,7 +115,13 @@ body {
 .popular-across-biztrique p {
   font-size: 11px !important;
   padding-top: 0 !important;
-  margin-bottom: 0;
+  margin-bottom: 4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  max-height: 33px;
 }
 .navbar-div,
 .post-block,
@@ -126,7 +132,7 @@ body {
   border-radius: 3px;
   border: 0.5px solid #e1e1e1;
 }
-.post-text-only {
+.post-text {
   padding: 8px !important;
 }
 .post-body {
@@ -169,6 +175,36 @@ body {
   background: transparent !important;
   display: none;
 }
+.add-general-post {
+  width: 99.6% !important;
+  padding: 0 !important;
+  display: none;
+}
+.add-general-post .col-md-12 {
+  margin-top: 10px;
+}
+.description-block {
+  padding: 3px;
+}
+.description-block textarea {
+  width: 100%;
+  resize: none;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 6px;
+  outline: none;
+}
+.add-general-post .dropdown-options {
+  border: 1px solid #e1e1e1;
+  padding: 10px;
+  margin: 3px;
+  border-radius: 5px;
+}
+.add-general-post .dropdown-selected {
+  padding-top: 7px;
+  font-family: Roboto-Light;
+}
 .post-multiple-images .image-block img {
   height: 255px;
 }
@@ -183,12 +219,19 @@ body {
   margin-left: 10px;
   cursor: pointer;
 }
+.post-button-block {
+  width: 100% !important;
+  border-top: 0.5px solid #e1e1e1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 .dropdown-selected:after {
   content: "\25bc";
   float: right;
   font-size: 9px;
   position: absolute;
   right: 5px;
+  color: #737070;
 }
 .dropdown-menu li:hover {
   background: #e1e1e1;
@@ -207,6 +250,7 @@ body {
 }
 .dropdown-menu {
   border: none;
+  box-shadow: 0px 2px 5px 1px #888;
   top: 112%;
   left: -50px;
 }
@@ -253,7 +297,7 @@ body {
 
 .post-body-detail a,
 .post-body-detail p,
-.post-text-only p {
+.post-text p {
   font-size: 14px;
   font-family: Roboto-Light;
   color: #000;
@@ -276,11 +320,30 @@ body {
 }
 .navbar-div,
 .head-block span {
-  font-size: 11px;
+  font-size: 12px;
+}
+#user-accounts .dropdown-menu {
+  top: 0;
+  max-width: 200px;
+  margin-top: 52px;
+  left: auto;
+  right: auto;
+  margin-left: 64px;
+}
+.fa-caret-down:before {
+  background: #fff;
+  margin-left: -3px;
+  padding-top: 6px;
+  padding-bottom: 8px;
+  padding-left: 2px;
+  padding-right: 2px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  color: #c7c7c7;
 }
 .post-detail p,
 .post-body-detail p,
-.post-text-only p {
+.post-text p {
   margin: 0;
 }
 #sub-category img {
@@ -390,7 +453,8 @@ body {
   border: 0.5px solid #e1e1e1;
   border-right: none;
 }
-.public-post-img {
+.public-post-img,
+.post-button-block img {
   width: 12px;
 }
 .comment-and-like-block img {
@@ -465,16 +529,65 @@ body {
 }
 .popular-across-biztrique .main-body,
 .friend-request-block .main-body {
-  max-height: 250px;
+  max-height: 215px;
   overflow: auto;
+}
+.fa-chevron-down:before {
+  font-weight: 300;
+  font-size: smaller;
+  color: #9c9999;
+}
+.add-image-video span:first-child {
+  margin-right: 15px;
+}
+.share-btn {
+  background: #f9f9f9;
+  border: 1px solid #f5f3f3;
+  padding: 3px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.cancel-btn {
+  border: none;
+  background: none;
+  margin-right: 12px;
+}
+.add-image-video {
+  width: 50%;
+  float: left;
+}
+.cancel-and-share {
+  text-align: right;
+}
+.public {
+  width: 15%;
+  float: left;
 }
 .post-categories .fa.arrow::before,
 .friend-request-block .fa.arrow::before,
-.popular-across-biztrique .fa.arrow::before {
+.popular-across-biztrique .fa.arrow::before,
+#user-accounts .dropdown-menu li::before,
+.add-image-video span::before {
   content: "x";
   padding-right: 12px;
   font-family: monospace;
   font-size: 15px;
+  color: #9c9999;
+}
+#user-accounts .dropdown-menu li.my-network::before,
+#user-accounts .dropdown-menu li.my-settings::before {
+  display: block;
+  width: 25px;
+  float: left;
+  background: transparent;
+  margin-right: -2px;
+  margin-left: -3px;
+}
+#user-accounts .dropdown-menu li.my-network::before {
+  content: url(../images/Network.svg);
+}
+#user-accounts .dropdown-menu li.my-settings::before {
+  content: url(../images/Settings.svg);
 }
 #general-post {
   width: 25%;
@@ -493,6 +606,7 @@ body {
   float: left;
   border-top: none;
   border-right: none;
+  cursor: pointer;
 }
 .post-option-btn img {
   width: 3.3px;
@@ -584,6 +698,10 @@ body {
 #user-accounts {
   border-left: 0.5px solid #e1e1e1;
   padding-left: 12px;
+}
+#user-accounts img {
+  width: 28px;
+  height: 28px;
 }
 #notification-btn {
   padding-right: 5px;
