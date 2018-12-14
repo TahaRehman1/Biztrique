@@ -718,3 +718,420 @@ body {
 .header-not-img {
   width: 30px;
 }
+#user-accounts,
+#user-accounts ul li {
+  cursor: pointer;
+}
+#user-accounts li a {
+  display: inline-block;
+  padding: 0;
+  text-decoration: none;
+  background-color: transparent;
+}
+#user-accounts li a:hover {
+  background-color: transparent;
+}
+.profile-categories {
+  background: white;
+  border-radius: 3px;
+  border: 0.5px solid #e1e1e1;
+  padding: 15px 10px;
+}
+.profile-categories-span {
+  font-size: 12px;
+  cursor: pointer;
+  padding-left: 4px;
+}
+.profile-categories-span:hover {
+  color: #ff7e41;
+}
+.overview-div {
+  background: white;
+  border-radius: 3px;
+  border: 0.5px solid #e1e1e1;
+  height: auto;
+  overflow: hidden;
+  margin-top: 15px;
+}
+.overview-details-div {
+  padding: 15px 10px;
+}
+.overview-details-div div {
+  background: #f9f9f9;
+  border: 0.5px solid #e1e1e1;
+  border-radius: 3px;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+.overview-head-div p {
+  margin-bottom: 0;
+  font-size: 12px;
+}
+.overview-head-div {
+  padding: 10px;
+  border-bottom: 0.5px solid #e1e1e1;
+  font-family: "Roboto-Medium";
+  color: black;
+}
+.overview-details-div div label {
+  font-family: "Roboto-Light";
+  font-size: 11px;
+}
+.overview-details-div div p {
+  font-family: "Roboto-Medium";
+  font-size: 14px;
+}
+.no-results-p {
+  font-size: 11px;
+  text-align: center;
+  padding: 30px;
+  font-family: "Roboto-Light";
+}
+.fa-pencil {
+  font-size: 16px;
+}
+.overview-div .fa-pencil {
+  float: right;
+}
+.profile-categories .category-selected {
+  color: #ff7e41;
+  font-family: Roboto-Medium;
+  font-size: 12px;
+}
+.overview-details-div .col-md-4:nth-child(2),
+.overview-details-div .col-md-4:nth-child(5) {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.overview-details-div .col-md-4 {
+  width: 32%;
+}
+.overview-details-div .col-md-6:nth-of-type(odd) {
+  margin-right: 9px;
+}
+.overview-details-div .col-md-6 {
+  width: 49%;
+  float: left;
+}
+.profile-head-block img {
+  width: 32px;
+  height: 32px;
+  float: left;
+}
+.profile-head-block {
+  overflow: hidden;
+  padding-left: 10px !important;
+  margin-bottom: 10px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 3px;
+  border: 0.5px solid #e1e1e1;
+}
+
+.profile-head-block p {
+  float: left;
+  margin-bottom: 0;
+  margin-left: 10px;
+}
+.profile-head-name {
+  font-family: "Roboto-Medium";
+  font-size: 12px;
+}
+.profile-head-post {
+  font-family: "Roboto-Light";
+  font-size: 11px;
+}
+.product-details-close {
+  width: 12px;
+  height: 18px;
+  float: left;
+  margin-right: 10px;
+}
+.product-feature-p {
+  float: left;
+  font-size: 12px;
+  font-family: "Roboto-Light";
+  margin-bottom: 5px;
+}
+.product-title-p {
+  font-size: 12px;
+  font-family: "Roboto-Medium";
+  margin-bottom: 5px;
+}
+.product-div .col-md-7 {
+  background: #fff;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  float: right;
+}
+.product-div {
+  background: #e1e1e1;
+  height: auto;
+  overflow: hidden;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 10px;
+  border-radius: 0px 0px 10px 10px;
+}
+.product-div .col-md-6 {
+  font-family: "Roboto-Light";
+  font-size: 12px;
+  text-align: center;
+  background: #fff;
+  padding: 13px 0px;
+  border-top: 0.5px solid #e1e1e1;
+}
+.mark-unavailable {
+  border-right: 0.5px solid #e1e1e1;
+}
+.classified-block {
+  padding-bottom: 20px;
+  padding-top: 15px;
+}
+.market-items-div p {
+  font-size: 12px;
+  font-family: "Roboto-Medium";
+  margin-bottom: 0px;
+}
+.market-items-div {
+  padding: 10px;
+  background: #fff;
+  border: 0.5px solid #e1e1e1;
+  border-bottom: none;
+}
+.network-block {
+  padding-top: 15px;
+}
+#profile-network {
+  padding-bottom: 20px;
+}
+#profile-network .head-block p {
+  float: right;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  font-family: "Roboto-Light";
+  font-size: 12px !important;
+  margin-top: 3px;
+}
+#profile-network .head-block span {
+  width: 100%;
+}
+#profile-network .head-block span {
+  font-family: "Roboto-Medium";
+  font-size: 12px !important;
+}
+#profile-network .btn-options {
+  position: relative;
+  margin-top: 18px;
+  right: 0;
+  width: 12%;
+  float: right;
+}
+#profile-network .user-detail {
+  width: 75%;
+}
+#profile-network .user-post-profile-img {
+  margin-top: 10px;
+}
+.designation-p {
+  padding-bottom: 0 !important;
+  margin-bottom: 0;
+  float: left;
+  margin-top: 4px;
+  padding-left: 5px !important;
+}
+#profile-network .user-name {
+  float: left;
+  padding-bottom: 4px;
+  padding-top: 4px;
+}
+.network-desc {
+  clear: both;
+}
+#profile-network .friend-request-block .main-body {
+  overflow: hidden;
+  height: auto;
+  max-height: unset;
+  border: none;
+}
+#profile-network .friend-request-block .request-user {
+  margin-bottom: 5px;
+  background: #fff;
+  border: 0.5px solid #e1e1e1;
+}
+#profile-network .friend-request-block .main-block {
+  background: transparent;
+  border: none;
+}
+#profile-network .friend-request-block .head-block {
+  border: 0.5px solid #e1e1e1;
+  background: #fff;
+  border-bottom: none;
+}
+#profile-network .friend-request-block,
+#profile-network .my-networks-div {
+  overflow: hidden;
+}
+.my-networks-div {
+  border-radius: 3px;
+  border: 0.5px solid #e1e1e1;
+  background: #fff;
+}
+.my-network-head {
+  padding: 0px;
+  border-bottom: 0.5px solid #e1e1e1;
+  overflow: hidden;
+}
+.my-network-head p {
+  margin-bottom: 0;
+  font-family: "Roboto-Medium";
+  font-size: 12px !important;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  float: left;
+}
+.my-network-head a {
+  float: right;
+  padding: 10px;
+  font-size: 12px;
+  color: black;
+  border-left: 0.5px solid #e1e1e1;
+}
+.my-network-head .product-details-close {
+  width: 18px;
+  height: 16px;
+  float: left;
+  margin-right: 6px;
+}
+#profile-network .my-networks .col-md-4 img {
+  width: 96px;
+  height: 96px;
+  background: #f5f3f3;
+  border: none;
+}
+#profile-network .my-networks .col-md-4 {
+  text-align: center;
+  border-bottom: 0.5px solid #e1e1e1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#profile-network .my-networks .col-md-4 p {
+  margin-bottom: 0px;
+  margin-top: 5px;
+}
+#profile-network .my-networks .col-md-4 .network-name {
+  font-family: "Roboto-Medium";
+  font-size: 12px !important;
+}
+#profile-network .my-networks .col-md-4 .network-desig {
+  font-family: "Roboto-Light";
+  font-size: 12px !important;
+}
+.view-more-networks {
+  margin-left: auto;
+  margin-right: auto;
+  background: #f5f3f3;
+  border: none;
+  padding: 8px 40px 8px 40px;
+  margin-top: 15px;
+  font-family: "Roboto-Medium";
+  font-size: 12px !important;
+}
+.view-more-div {
+  width: 100%;
+  text-align: center;
+}
+.my-network-head #sub-category {
+  float: right;
+  padding: 0;
+  margin-top: -3px;
+  padding-right: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.events-block {
+  padding-top: 15px;
+}
+.not-attending {
+  border-left: 0.5px solid #e1e1e1;
+  border-right: 0.5px solid #e1e1e1;
+}
+.event-div .col-md-4 {
+  font-family: "Roboto-Light";
+  font-size: 12px;
+  text-align: center;
+  background: #fff;
+  padding: 13px 0px;
+  border-top: 0.5px solid #e1e1e1;
+}
+.event-div .col-md-12 {
+  padding: 0px;
+}
+.event-buttons:hover,
+.product-div .col-md-6:hover {
+  color: #ff7e41;
+  background: #f5f3f3;
+  cursor: pointer;
+}
+.jobs-block,
+.favorites-block,
+.activity-block {
+  padding-top: 15px;
+}
+.my-fav-people,
+.my-fav-companies {
+  margin-bottom: 15px;
+  overflow: hidden;
+  background: #fff;
+  border: 0.5px solid #e1e1e1;
+}
+.my-fav-people .col-md-4 img,
+.my-fav-companies .col-md-4 img {
+  width: 96px;
+  height: 96px;
+  background: #f5f3f3;
+  border: none;
+}
+.my-fav-people .col-md-4,
+.my-fav-companies .col-md-4 {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.my-fav-people .col-md-4 p,
+.my-fav-companies .col-md-4 p {
+  margin-bottom: 0px;
+  margin-top: 5px;
+}
+.my-fav-people .market-items-div,
+.my-fav-companies .market-items-div {
+  border: none;
+}
+.my-fav-people .person-name,
+.my-fav-companies .company-name {
+  font-size: 12px;
+  font-family: "Roboto-Medium";
+}
+.my-fav-people .person-desig,
+.my-fav-companies .company-desig {
+  font-size: 12px;
+  font-family: "Roboto-Light";
+}
+.company-desc {
+  font-size: 11px;
+  font-family: "Roboto-Light";
+}
+.fav-icon {
+  width: 11px !important;
+  height: 10px !important;
+  position: absolute;
+  left: 15px;
+  top: 12px;
+}
+.create-event-block img,
+.create-job-block img {
+  width: 12px;
+  height: 12px;
+  float: left;
+  margin-top: 3px;
+}
