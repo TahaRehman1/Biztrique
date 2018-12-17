@@ -25,10 +25,10 @@
         <img src="images/search.svg" class="search-image"/>
         </div>
         <ul class="header-links">
-          <li class="selected"><a href="./index.html">Home</a></li>
+          <li><a href="./index.html">Home</a></li>
           <li><a href="./Market.html">Market</a></li>
           <li><a href="./Events.html">Events</a></li>
-          <li><a href="./Jobs.html">Jobs</a></li>
+          <li class="selected"><a href="./Jobs.html">Jobs</a></li>
         </ul>
         <div class="header-user-div">
           <span id="account-btn">
@@ -72,29 +72,40 @@
             <span>Primary Filters</span>
           </div>
           <ul class="navbar-list">
-            <li class="selected">All Activity</li>
-            <li>General Posts</li>
-            <li>Market Posts</li>
-            <li>Event Posts</li>
-            <li>Job Posts</li>
+            <li class="selected">All Posts</li>
+            <li>Network Posts</li>
+            <li>Public Posts</li>
+            <li>Featured Posts</li>
           </ul>
         </div>
+        <div class="navbar-div events-subnav">
+                <ul class="navbar-list">
+                  <li class="tags-search-li">
+                      <input type="text" class="tags-search" placeholder="Type Tags">
+                    <img class="tags-search-img" src="./images/search-grey.png">
+                    </li>
+                  <li>
+                    <select class="submenu-select">
+                      <option>Select Location</option>
+                    </select>
+                </li>
+                  <li><select class="submenu-select">
+                        <option>Select Fee Type</option>
+                      </select></li>
+                  <li><select class="submenu-select">
+                        <option>Select Category</option>
+                      </select>
+                    </li>
+                </ul>
+              </div>
+              <input type="button" value="Search" class="submit-button">
       </div>
       <div class="col-md-5 post-list">
-        <div class="post-categories  row">
-          <div id="general-post">
-            <span class="fa arrow"></span>General Post
-          </div>
-          <div id="market"><span class="fa arrow"></span>Market</div>
-          <div id="event"><span class="fa arrow"></span>Event</div>
-          <div id="jobs"><span class="fa arrow"></span>Jobs</div>
-          <div id="sub-category">
+        <div class="post-categories  event-post-categories row">
+          <div id="event">Jobs</div>
+          <div id="sub-category" class="event-sub">
+              <i class="fa fa-plus"></i>
             <img class="header-msg-img" src="./images/Sort.svg" />
-            <img
-              class="header-msg-img"
-              src="./images/Filter.svg"
-              id="filter-image"
-            />
           </div>
           
           <div class="add-general-post">
@@ -179,213 +190,17 @@
           </div>
         </div>
         <div class="posts row">
+          
           <div class="post-block col-md-12">
             <div class="post-block-header">
               <div class="col-md-8">
                 <div class="user-post-profile-img">
-                  <span class="status-offline"></span>
                   <img src="images/Rectangle 65.png" />
                 </div>
                 <div class="post-detail">
                   <p>
                     <span class="user-name">Name</span>
-                    <span>shared a status</span>
-                  </p>
-                  <span class="designation">Designation-Film</span>
-                  <p>
-                    <img src="images/Public.svg" class="public-post-img" />
-                    <span> Time Posted </span>
-                  </p>
-                </div>
-              </div>
-              <span class="post-option-btn"
-                ><img src="images/Options.svg"
-              /></span>
-            </div>
-            <div class="post-body col-md-12">
-              <p class="post-text">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua. At.
-              </p>
-            </div>
-            <div class="comment-and-like-block">
-              <div class="col-md-4 like-btn">
-                <img src="images/like.svg" /><span>Like</span>
-              </div>
-              <div class="col-md-4 comment-btn">
-                <img src="images/chat.svg" /><span>Comment</span>
-              </div>
-              <div class="col-md-4 share-btn">
-                <img src="images/share.svg" /><span></span><span>Share</span>
-              </div>
-            </div>
-          </div>
-          <div class="post-block col-md-12">
-            <div class="post-block-header">
-              <div class="col-md-8">
-                <div class="user-post-profile-img">
-                  <span class="status-online"></span>
-                  <img src="images/Rectangle 65.png" />
-                </div>
-                <div class="post-detail">
-                  <p>
-                    <span class="user-name">Name</span>
-                    <span>shared a link</span>
-                  </p>
-                  <span class="designation">Designation-Film</span>
-                  <p>
-                    <img src="images/Public.svg" class="public-post-img" />
-                    <span> Time Posted </span>
-                  </p>
-                </div>
-              </div>
-              <span class="post-option-btn"
-                ><img src="images/Options.svg"
-              /></span>
-            </div>
-            <div class="post-body col-md-12  post-external-video">
-              <span class="play-icon"></span>
-              <div class="image-block"><video id="my-video" class="video-js" controls preload="auto" width="640" height="264"
-                poster="images/post-image.png" data-setup="{}">
-                  <source src="Videos/Sample.mp4" type='video/mp4'>
-                  <source src="MY_VIDEO.webm" type='video/webm'>
-                  <p class="vjs-no-js">
-                    To view this video please enable JavaScript, and consider upgrading to a web browser that
-                    <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-                  </p>
-                </video></div>
-              <div class="post-body-detail">
-                <a>Destination URL</a>
-                <p><a class="url-title">Url title comes here</a></p>
-                <a>Url Description comes here</a>
-              </div>
-            </div>
-            <div class="comment-and-like-block">
-              <div class="col-md-4 like-btn">
-                <img src="images/like.svg" /><span>Like</span>
-              </div>
-              <div class="col-md-4 comment-btn">
-                <img src="images/chat.svg" /><span>Comment</span>
-              </div>
-              <div class="col-md-4 share-btn">
-                <img src="images/share.svg" /><span></span><span>Share</span>
-              </div>
-            </div>
-          </div>
-          <div class="post-block col-md-12">
-            <div class="post-block-header">
-              <div class="col-md-8">
-                <div class="user-post-profile-img">
-                  <span class="status-busy"></span>
-                  <img src="images/Rectangle 65.png" />
-                </div>
-                <div class="post-detail">
-                  <p>
-                    <span class="user-name">Name</span>
-                    <span>shared a youtube video</span>
-                  </p>
-                  <span class="designation">Designation-Film</span>
-                  <p>
-                    <img src="images/Public.svg" class="public-post-img" />
-                    <span> Time Posted </span>
-                  </p>
-                </div>
-              </div>
-              <span class="post-option-btn"
-                ><img src="images/Options.svg"
-              /></span>
-            </div>
-            <div class="post-body col-md-12  post-youtube-video">
-              <div class="clearfix_youtube">
-                <div class="col-md-4">
-                  <a
-                    href="https://www.youtube.com/attribution_link?a=r6DBPV9Qdrc&amp;u=%2Fwatch%3Fv%3D66n1DFrmc0Q%26feature%3Dshare&amp;fbclid=IwAR1rYEIq5NydqqW3vU4RL4nMnJYlpIz7N0o_y6sxjpWWNEfRmT0S9g93f1Y"
-                  >
-                    <img src="images/Pohto.jpg" />
-                  </a>
-                </div>
-                <div class="col-md-8 youtube-details">
-                  <a
-                    href="https://www.youtube.com/attribution_link?a=r6DBPV9Qdrc&amp;u=%2Fwatch%3Fv%3D66n1DFrmc0Q%26feature%3Dshare&amp;fbclid=IwAR2ihHcbJECtxn05rPzMkP4nazRHdAyy66oiIvCdwSy9zi4F0LBnpHVxzWo"
-                  >
-                    <span>youtube.com</span>
-                    <p>Build a Wordpress Website In 1 Hour</p>
-                    <span>
-                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                      sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                      magna aliquya...
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="comment-and-like-block">
-              <div class="col-md-4 like-btn">
-                <img src="images/like.svg" /><span>Like</span>
-              </div>
-              <div class="col-md-4 comment-btn">
-                <img src="images/chat.svg" /><span>Comment</span>
-              </div>
-              <div class="col-md-4 share-btn">
-                <img src="images/share.svg" /><span></span><span>Share</span>
-              </div>
-            </div>
-          </div>
-          <div class="post-block col-md-12">
-            <div class="post-block-header">
-              <div class="col-md-8">
-                <div class="user-post-profile-img">
-                  <span class="status-online"></span>
-                  <img src="images/Rectangle 65.png" />
-                </div>
-                <div class="post-detail">
-                  <p>
-                    <span class="user-name">Name</span>
-                    <span>shared a link</span>
-                  </p>
-                  <span class="designation">Designation-Film</span>
-                  <p>
-                    <img src="images/Public.svg" class="public-post-img" />
-                    <span> Time Posted </span>
-                  </p>
-                </div>
-              </div>
-              <span class="post-option-btn"
-                ><img src="images/Options.svg"
-              /></span>
-            </div>
-            <div class="post-body col-md-12  post-external-image">
-              <div class="image-block"><img src="images/sample.jpg" /></div>
-              <div class="post-body-detail">
-                <a>Destination URL</a>
-                <p><a class="url-title">Url title comes here</a></p>
-                <a>Url Description comes here</a>
-              </div>
-            </div>
-            <div class="comment-and-like-block">
-              <div class="col-md-4 like-btn">
-                <img src="images/like.svg" /><span>Like</span>
-              </div>
-              <div class="col-md-4 comment-btn">
-                <img src="images/chat.svg" /><span>Comment</span>
-              </div>
-              <div class="col-md-4 share-btn">
-                <img src="images/share.svg" /><span></span><span>Share</span>
-              </div>
-            </div>
-          </div>
-          <div class="post-block col-md-12">
-            <div class="post-block-header">
-              <div class="col-md-8">
-                <div class="user-post-profile-img">
-                  <span class="status-offline"></span>
-                  <img src="images/Rectangle 65.png" />
-                </div>
-                <div class="post-detail">
-                  <p>
-                    <span class="user-name">Name</span>
-                    <span>shared a link</span>
+                    <span>posted a job opening</span>
                   </p>
                   <span class="designation">Designation-Film</span>
                   <p>
@@ -399,29 +214,23 @@
               /></span>
             </div>
             <div class="post-body col-md-12  post-multiple-images">
-              <p class="post-text">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua. At.
-              </p>
               <div class="main-block">
-                <div class="image-block col-md-10">
-                  <img src="images/sample.jpg" />
-                </div>
-                <div class="sub-image-block col-md-2">
-                  <img src="images/1.jpg" /><img src="images/2.jpg" /><img
-                    src="images/3.jpg"
-                  />
-                  <img src="images/1.jpg" />
-                  <span class="last-image"
-                    ><span class="images-number">+2</span></span
-                  >
+                <div class="image-block col-md-12">
+                  <img class="job-poster" src="images/office-poster.jpg" />
                 </div>
               </div>
               <div class="post-body-detail">
-                <a>Destination URL</a>
-                <p><a class="url-title">Url title comes here</a></p>
-                <a>Url Description comes here</a>
+                <div class="col-md-6 event-desc-div job-desc-div">
+                <p class="event-title">Job Title</p>
+                <p class="product-feature-p"><img class="product-details-close" src="./images/close-icon-black.svg"/>Company name will appear here (if shown)</p>
+                        <p class="product-feature-p"><img class="product-details-close" src="./images/close-icon-black.svg"/>Location will appear here</p>
+                        <p class="product-feature-p"><img class="product-details-close" src="./images/close-icon-black.svg"/>Category will appear here</p>
+                        <p class="product-feature-p"><img class="product-details-close" src="./images/close-icon-black.svg"/>Salary will appear here (if shown)</p>
+                        <p class="product-feature-p"><img class="product-details-close" src="./images/close-icon-black.svg"/>Tags will appear here</p> 
+                      </div>
+                <div class="col-md-6 event-features-div">
+                    <p class="job-short-desc">Event description will appear here... Lorem i ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumysum dolor sit ame sum tempor... <a class="read-more-link">Read more</a></p>       
+                </div>
               </div>
             </div>
             <div class="comment-and-like-block">

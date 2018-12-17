@@ -444,6 +444,7 @@ body {
 .navbar-list .selected {
   color: #ff7e41;
   font-family: Roboto-Medium;
+  background: #e1e1e1;
   font-size: 12px;
 }
 .comment-and-like-block .col-md-4 {
@@ -842,14 +843,14 @@ body {
   font-size: 11px;
 }
 .product-details-close {
-  width: 12px;
+  width: 12px !important;
   height: 18px;
   float: left;
   margin-right: 10px;
 }
 .product-feature-p {
   float: left;
-  font-size: 12px;
+  font-size: 12px !important;
   font-family: "Roboto-Light";
   margin-bottom: 5px;
 }
@@ -1129,9 +1130,188 @@ body {
   top: 12px;
 }
 .create-event-block img,
-.create-job-block img {
+.create-job-block img,
+.create-invite-block img {
   width: 12px;
   height: 12px;
   float: left;
   margin-top: 3px;
+}
+.show-navbar-item {
+  display: block !important;
+}
+.hide-navbar-item {
+  display: none;
+}
+.event-submenu,
+.network-submenu {
+  margin-top: 10px;
+}
+.help-divs {
+  background: #fff;
+  border: 0.5px solid #e1e1e1;
+}
+.general-help-block {
+  height: 95vh;
+}
+.help-head-div {
+  padding: 10px;
+  font-family: "Roboto-Medium";
+  font-size: 12px;
+  border-bottom: 0.5px solid #e1e1e1;
+}
+.help-head-div p {
+  margin-bottom: 0;
+}
+.header-links li a:hover {
+  color: #fff;
+}
+.header-links li a {
+  color: #fff;
+}
+.event-features-div,
+.event-desc-div {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.event-desc-div {
+  padding-left: 0px;
+}
+.event-desc-div .event-title {
+  font-size: 14px;
+  font-family: "Roboto-Medium";
+  padding-left: 0px;
+}
+.event-desc-div .event-short-desc {
+  font-family: "Roboto-Light";
+  font-size: 12px;
+}
+.event-short-desc .read-more-link {
+  font-size: 12px;
+  font-family: "Roboto-Light";
+  color: #ff7e41;
+}
+.event-post-categories #event {
+  width: 87% !important;
+  font-family: "Roboto-Medium";
+}
+.event-post-categories .event-sub {
+  width: 13% !important;
+}
+.event-post-categories .event-sub .header-msg-img {
+  width: 24px;
+}
+.event-sub .fa-plus {
+  float: left;
+  color: #ececec;
+  font-size: 16px;
+  font-weight: 100;
+  margin-top: 3px;
+}
+.events-subnav {
+  margin-top: 10px;
+}
+.events-subnav ul li {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.events-subnav ul li:hover {
+  background: #fff;
+  color: #000;
+  border-right: 0.5px solid #e1e1e1;
+}
+.submenu-select {
+  border: none;
+  margin-left: -3px;
+  cursor: pointer;
+  width: 100%;
+}
+.submenu-select:hover {
+  color: black;
+}
+.tags-search {
+  border: none;
+  width: 86%;
+  float: left;
+}
+.tags-search-img {
+  width: 16px;
+  height: 17px;
+  float: left;
+  margin-top: 2px;
+}
+.tags-search-li {
+  overflow: hidden;
+}
+.submit-button {
+  font-family: "Roboto-Medium";
+  font-size: 14px;
+  width: 100%;
+  margin-top: 10px;
+  border: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: #f9f9f9;
+  border: 0.5px solid #e1e1e1;
+}
+.tags-search-li:hover {
+  border-top: 0.5px solid #e1e1e1;
+}
+.job-poster {
+  height: auto !important;
+}
+.job-short-desc {
+  font-size: 12px !important;
+  font-family: "Roboto-Light" !important;
+}
+.job-short-desc .read-more-link {
+  font-size: 12px !important;
+  font-family: "Roboto-Light" !important;
+  color: #ff7e41;
+}
+.job-desc-div {
+  padding-right: 0;
+}
+.market-features-div {
+  padding: 0;
+  padding-bottom: 5px;
+}
+.market-features-div .col-md-6 {
+  padding: 0;
+}
+.market-filter-li input {
+  width: 100%;
+  border: none;
+}
+.market-filter-li {
+  border: 0.5px solid #e1e1e1;
+  border-right: none;
+  overflow: hidden;
+  border-left: none;
+  padding-left: 10px !important;
+  overflow: hidden;
+}
+.market-filter-li .col-md-6 {
+  padding: 0;
+  padding-right: 5px;
+}
+.market-filter-li {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  border-top: none;
+}
+.market-filter-li .col-md-6 {
+  padding-right: 2px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+}
+.market-filter-li .col-md-6:nth-child(1) {
+  border-right: 0.5px solid #e1e1e1;
+}
+.events-subnav .navbar-list {
+  margin-bottom: 0;
+}
+.events-subnav ul li {
+  border-bottom: 0.5px solid #e1e1e1;
 }

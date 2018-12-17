@@ -25,10 +25,10 @@
           <img src="images/search.svg" class="search-image" />
         </div>
         <ul class="header-links">
-          <li class="selected">Home</li>
-          <li>Market</li>
-          <li>Events</li>
-          <li>Jobs</li>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./Market.html">Market</a></li>
+          <li><a href="./Events.html">Events</a></li>
+          <li><a href="./Jobs.html">Jobs</a></li>
         </ul>
         <div class="header-user-div">
           <span id="account-btn">
@@ -58,7 +58,7 @@
               <li>My Events</li>
               <li>My Jobs</li>
               <li class="my-settings">Settings</li>
-              <li>Help & Support</li>
+              <li><a href="./Help.html">Help & Support</a></li>
               <li>Logout</li>
             </ul>
           </span>
@@ -80,15 +80,66 @@
                   <img src="./images/close-icon-black.svg">
                   <p class="profile-head-name">Create Job</p>
                 </div>
+                <div class="head-block profile-head-block create-invite-block">
+                    <img src="./images/close-icon-black.svg">
+                    <p class="profile-head-name">Send Invite</p>
+                  </div>
         <div class="navbar-div">
           <ul class="navbar-list">
-            <li class="selected">Overview</li>
-            <li>Contact Information</li>
-            <li>Education</li>
-            <li>Experience</li>
-            <li>Interest</li>
-            <li>Skills</li>
+            <li class="navbar-items profile-network-items" id="filters-item">Primary Filters</li>
+            <li class="navbar-items selected profile-main-items" id="overview-item">Overview</li>
+            <li class="navbar-items profile-main-items" id="contact-item">Contact Information</li>
+            <li class="navbar-items profile-main-items" id="education-item">Education</li>
+            <li class="navbar-items profile-main-items" id="experience-item">Experience</li>
+            <li class="navbar-items profile-main-items" id="interest-item">Interest</li>
+            <li class="navbar-items profile-main-items" id="skills-item">Skills</li>
+            <li class="navbar-items profile-network-items" id="all-network-item">All Networks</li>
+            <li class="navbar-items profile-network-items" id="people-item">People</li>
+            <li class="navbar-items profile-network-items" id="companies-item">Companies</li>
+            <li class="navbar-items profile-classified-items" id="products-item">All Products</li>
+            <li class="navbar-items profile-classified-items" id="selling-item">Selling</li>
+            <li class="navbar-items profile-classified-items" id="unavailable-item">Unavailable</li>
+            <li class="navbar-items profile-classified-items" id="sold-item">Sold</li>
+            <li class="navbar-items profile-favorite-items" id="all-fav-item">All Favorites</li>
+            <li class="navbar-items profile-favorite-items" id="fav-people-item">People</li>
+            <li class="navbar-items profile-favorite-items" id="fav-company-item">Company</li>
+            <li class="navbar-items profile-favorite-items" id="fav-market-item">Market</li>
+            <li class="navbar-items profile-favorite-items" id="fav-events-item">Events</li>
+            <li class="navbar-items profile-favorite-items" id="fav-jobs-item">Jobs</li>
+            <li class="navbar-items profile-events-items" id="event-all-item">All Events</li>
+            <li class="navbar-items profile-events-items" id="event-accept-item">Accepted</li>
+            <li class="navbar-items profile-events-items" id="event-tentative-item">Tentative</li>
+            <li class="navbar-items profile-events-items" id="event-notattend-item">Not Attending</li>
+            <li class="navbar-items profile-activities-items" id="all-activities-item">All Activities</li>
+            <li class="navbar-items profile-activities-items" id="general-posts-item">General Posts</li>
+            <li class="navbar-items profile-activities-items" id="market-posts-item">Market Posts</li>
+            <li class="navbar-items profile-activities-items" id="event-posts-item">Event Posts</li>
+            <li class="navbar-items profile-activities-items" id="job-posts-item">Job Posts</li>
+            <li class="navbar-items profile-jobs-items" id="all-jobs-item">All Jobs</li>
+            <li class="navbar-items profile-jobs-items" id="jobs-applied-item">Applied</li>
+            <li class="navbar-items profile-jobs-items" id="notapplied-jobs-item">Not Applied</li>
           </ul>
+        </div>
+        <div class="navbar-div event-submenu">
+            <ul class="navbar-list">
+              <li class="navbar-items profile-events-items" id="my-event-item">My Events</li>
+              <li class="navbar-items profile-events-items" id="event-attend-item">Attending</li>
+            </ul>
+        </div>
+        <div class="navbar-div network-submenu">
+            <ul class="navbar-list">
+              <li class="navbar-items profile-network-items">Groups</li>
+              <li class="navbar-items profile-network-items">Group 1</li>
+              <li class="navbar-items profile-network-items">Group 2</li>
+              <li class="navbar-items profile-network-items">Group 3</li>
+              <li class="navbar-items profile-network-items">Group 4</li>
+              <li class="navbar-items profile-network-items">Group 5</li>
+              <li class="navbar-items profile-network-items">Group 6</li>
+              <li class="navbar-items profile-network-items">Group 7</li>
+              <li class="navbar-items profile-network-items">Group 8</li>
+              <li class="navbar-items profile-network-items">Group 9</li>
+              <li class="navbar-items profile-network-items">Group 10</li>
+            </ul>
         </div>
       </div>
       <div class="col-md-5 post-list">
@@ -1396,7 +1447,15 @@
             .append(value);
         });
       });
-      $(function(){
+      $(function(){ 
+        $(".navbar-items").addClass("hide-navbar-item");
+          $(".navbar-items").removeClass("selected");
+          $(".navbar-items").removeClass("show-navbar-item");
+          $("#overview-item").addClass("selected");  
+          $(".profile-main-items").removeClass("hide-navbar-item");
+          $(".profile-main-items").addClass("show-navbar-item");
+          $(".event-submenu").hide();
+          $(".network-submenu").hide();
         $("#profile-classified").hide();
         $("#profile-favorites").hide();
         $("#profile-network").hide();
@@ -1405,41 +1464,93 @@
         $("#profile-activity").hide();
         $(".create-event-block").hide();
         $(".create-job-block").hide();
+        $(".create-invite-block").hide();
         $(".profile-main").addClass("category-selected");
         $(".profile-main").click(function(){
+          $(".event-submenu").hide();
+          $(".network-submenu").hide();
+          $(".navbar-items").addClass("hide-navbar-item");
+          $(".navbar-items").removeClass("selected");
+          $(".navbar-items").removeClass("show-navbar-item");
+          $("#overview-item").addClass("selected");  
+          $(".profile-main-items").removeClass("hide-navbar-item");
+          $(".profile-main-items").addClass("show-navbar-item");
           $(".create-event-block").hide();
           $(".create-job-block").hide();
+          $(".create-invite-block").hide();
           $(".profile-categories-span").removeClass("category-selected");
           $(this).addClass("category-selected");
           $(".profile-divs").hide();
           $("#profile-main").show();
         });
         $(".profile-classified").click(function(){
+          $(".event-submenu").hide();
+          $(".network-submenu").hide();
+          $(".navbar-items").addClass("hide-navbar-item");
+          $(".navbar-items").removeClass("selected");
+          $(".navbar-items").removeClass("show-navbar-item");
+          $("#products-item").addClass("selected"); 
+          $(".profile-classified-items").removeClass("hide-navbar-item");
+          $(".profile-classified-items").addClass("show-navbar-item");
+          $("#filters-item").removeClass("hide-navbar-item");
+          $("#filters-item").addClass("show-navbar-item");
           $(".create-event-block").hide();
           $(".create-job-block").hide();
+          $(".create-invite-block").hide();
           $(".profile-categories-span").removeClass("category-selected");
           $(this).addClass("category-selected");
           $(".profile-divs").hide();
           $("#profile-classified").show();
         });
         $(".profile-network").click(function(){
+          $(".event-submenu").hide();
+          $(".network-submenu").show();
+          $(".navbar-items").addClass("hide-navbar-item");
+          $(".navbar-items").removeClass("selected");
+          $(".navbar-items").removeClass("show-navbar-item");
+          $("#all-network-item").addClass("selected"); 
+          $(".profile-network-items").removeClass("hide-navbar-item");
+          $(".profile-network-items").addClass("show-navbar-item");
           $(".create-event-block").hide();
           $(".create-job-block").hide();
+          $(".create-invite-block").show();
           $(".profile-categories-span").removeClass("category-selected");
           $(this).addClass("category-selected");
           $(".profile-divs").hide();
           $("#profile-network").show();
         }); 
         $(".profile-events").click(function(){
+          $(".navbar-items").addClass("hide-navbar-item");
+          $(".navbar-items").removeClass("selected");
+          $(".navbar-items").removeClass("show-navbar-item");
+          $("#event-all-item").addClass("selected"); 
+          $(".profile-events-items").removeClass("hide-navbar-item");
+          $(".profile-events-items").addClass("show-navbar-item");
+          $("#filters-item").removeClass("hide-navbar-item");
+          $("#filters-item").addClass("show-navbar-item"); 
+          $(".event-submenu").show();
+          $(".network-submenu").hide();
           $(".create-event-block").show();
           $(".create-job-block").hide();
+          $(".create-invite-block").hide();
           $(".profile-categories-span").removeClass("category-selected");
           $(this).addClass("category-selected");
           $(".profile-divs").hide();
           $("#profile-events").show();
         });
         $(".profile-jobs").click(function(){
+          $(".navbar-items").addClass("hide-navbar-item");
+          $(".navbar-items").removeClass("selected");
+          $(".navbar-items").removeClass("show-navbar-item");
+          $(".profile-jobs-items").removeClass("hide-navbar-item");
+          $(".profile-jobs-items").addClass("show-navbar-item");
+          $("#all-jobs-item").addClass("selected"); 
+          $("#filters-item").removeClass("hide-navbar-item");
+          $("#filters-item").addClass("show-navbar-item"); 
+          $(".event-submenu").hide();
+          $(".network-submenu").hide();
         $(".create-job-block").show();
+        $(".create-invite-block").hide();
         $(".create-event-block").hide();
           $(".profile-categories-span").removeClass("category-selected");
           $(this).addClass("category-selected");
@@ -1447,16 +1558,38 @@
           $("#profile-jobs").show();
         });
         $(".profile-favorites").click(function(){
+          $(".event-submenu").hide();
+          $(".network-submenu").hide();
+          $(".navbar-items").addClass("hide-navbar-item");
+          $(".navbar-items").removeClass("selected");
+          $(".navbar-items").removeClass("show-navbar-item");
+          $("#all-fav-item").addClass("selected"); 
           $(".create-event-block").hide();
           $(".create-job-block").hide();
+          $(".create-invite-block").hide();
+          $(".profile-favorite-items").removeClass("hide-navbar-item");
+          $(".profile-favorite-items").addClass("show-navbar-item");
+          $("#filters-item").removeClass("hide-navbar-item");
+          $("#filters-item").addClass("show-navbar-item");
           $(".profile-categories-span").removeClass("category-selected");
           $(this).addClass("category-selected");
           $(".profile-divs").hide();
           $("#profile-favorites").show();
         });
-        $(".profile-activity").click(function(){
+        $(".profile-activity").click(function(){  
+          $(".navbar-items").addClass("hide-navbar-item");
+          $(".navbar-items").removeClass("selected");
+          $(".navbar-items").removeClass("show-navbar-item");
+          $(".profile-activities-items").removeClass("hide-navbar-item");
+          $(".profile-activities-items").addClass("show-navbar-item");
+          $("#all-activities-item").addClass("selected"); 
+          $("#filters-item").removeClass("hide-navbar-item");
+          $("#filters-item").addClass("show-navbar-item"); 
+          $(".event-submenu").hide();
+          $(".network-submenu").hide();
           $(".create-event-block").hide();
           $(".create-job-block").hide();
+          $(".create-invite-block").hide();
           $(".profile-categories-span").removeClass("category-selected");
           $(this).addClass("category-selected");
           $(".profile-divs").hide();
