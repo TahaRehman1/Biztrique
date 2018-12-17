@@ -19,7 +19,7 @@
   <body>
     <div class="header-div">
       <div class="container">
-        <img class="logo-img" src="./images/BiztriqueLogo.svg" />
+        <a href="index.html"><img class="logo-img" src="./images/BiztriqueLogo.svg" /></a>
         <div class="search-main">
         <input placeholder="Search" class="search-box" type="text" />
         <img src="images/search.svg" class="search-image"/>
@@ -67,28 +67,48 @@
     </div>
     <div class="container body-container">
       <div class="col-md-2">
+        <div class="nav-bar-left">
         <div class="navbar-div">
           <div class="head-block">
             <span>Primary Filters</span>
           </div>
           <ul class="navbar-list">
-            <li class="selected">All Activity</li>
-            <li>General Posts</li>
-            <li>Market Posts</li>
-            <li>Event Posts</li>
-            <li>Job Posts</li>
+            <li class="selected" value="all">All Activity</li>
+            <li value="general">General Posts</li>
+            <li value="market">Market Posts</li>
+            <li value="event">Event Posts</li>
+            <li value="jobs">Job Posts</li>
           </ul>
         </div>
+        <div class="navbar-div-categories">
+          <div class="head-block">
+            <span>Categories</span>
+          </div>
+          <ul class="categories-list">
+            <li>Accessories</li>
+            <li>CPU</li>
+            <li>Desktop</li>
+            <li>Disk Devices</li>
+            <li>Gadgets</li>
+            <li>Notebooks</li>
+            <li>Printers</li>
+            <li>Smartphones</li>
+            <li>Tablest</li>
+            <li>Used Computers</li>
+          </ul>
+          <div class="view-all"><span>View all categories</span></div>
+        </div>
+      </div>
       </div>
       <div class="col-md-5 post-list">
         <div class="post-categories  row">
-          <div id="general-post">
+          <div id="general-post" class="category" data-target="#add-general-post">
             <span class="fa arrow"></span>General Post
           </div>
-          <div id="market"><span class="fa arrow"></span>Market</div>
-          <div id="event"><span class="fa arrow"></span>Event</div>
-          <div id="jobs"><span class="fa arrow"></span>Jobs</div>
-          <div id="sub-category">
+          <div id="market" class="category" data-target="#market-post"><span class="fa arrow"></span>Market</div>
+          <div id="event" class="category" data-target="#event-post"><span class="fa arrow"></span>Event</div>
+          <div id="jobs" class="category" data-target="#job-post"><span class="fa arrow"></span>Jobs</div>
+          <div id="sub-category" class="category" data-target="#filter-block">
             <img class="header-msg-img" src="./images/Sort.svg" />
             <img
               class="header-msg-img"
@@ -96,8 +116,231 @@
               id="filter-image"
             />
           </div>
-          
-          <div class="add-general-post">
+          <div class="event-post post-option" id="event-post">
+              <div class="col-md-12">
+                  <div class="col-md-12 description-block">
+                      <textarea  rows="2" class="your-ideas" placeholder="Write post titile..."></textarea>
+                      <textarea rows="3" class="tags" placeholder="Write post description here..."></textarea>
+                  </div>
+                  <div class="col-md-7 dropdown-options location">
+                      <p data-toggle="dropdown" class="dropdown-selected">Select location</p>
+                      <ul class="dropdown-menu">
+                        <li>General post</li>
+                        <li>Blog post</li>
+                        <li>Poll post</li>
+                      </ul>
+                    </div>
+                    <div class="col-md-5 dropdown-options">
+                      <p data-toggle="dropdown" class="dropdown-selected">Select category</p>
+                      <ul class="dropdown-menu">
+                        <li>None</li>
+                        <li>1 day</li>
+                        <li>1 week</li>
+                        <li>1 month</li>
+                        <li>1 year</li>
+                        <li>Specific time</li>
+                      </ul>
+                    </div>
+                    <div class="col-md-5 dropdown-options">
+                        <p data-toggle="dropdown" class="dropdown-selected">Select post duration</p>
+                        <ul class="dropdown-menu">
+                          <li>None</li>
+                          <li>1 day</li>
+                          <li>1 week</li>
+                          <li>1 month</li>
+                          <li>1 year</li>
+                          <li>Specific time</li>
+                        </ul>
+                      </div>
+                        <div class="col-md-3 post-input">
+                            <input type="text" placeholder="Write fee..." class="fee"/>
+                            </div>
+                        <div class="col-md-4 dropdown-options">
+                            <p data-toggle="dropdown" class="dropdown-selected">Select currency</p>
+                            <ul class="dropdown-menu">
+                              <li>None</li>
+                              <li>1 day</li>
+                              <li>1 week</li>
+                              <li>1 month</li>
+                              <li>1 year</li>
+                              <li>Specific time</li>
+                            </ul>
+                          </div>
+                          <div class="col-md-12 description-block">
+                              <textarea rows="3" class="tags" placeholder="Write tags here..."></textarea>
+                          </div>
+              </div>
+              <div class="post-button-block col-md-12">
+                  <div class="public">
+                    <img src="images/Public.svg"/>
+                    <span class="fa fa-chevron-down"></span>
+                  </div>
+                  <div class="add-image-video">
+                    <span id="add-image">Add Image</span>
+                    <span id="add-video">Add Video</span>
+                  </div>
+                  <div class="cancel-and-share">
+                    <input type="button" value="Cancel" class="cancel-btn">
+                    <input type="button" value="Share" class="share-bttn">
+                  </div>
+                </div>
+            </div>
+            <div class="job-post post-option" id="job-post">
+                <div class="col-md-12">
+                    <div class="col-md-12 description-block">
+                        <textarea  rows="2" class="your-ideas" placeholder="Write post titile..."></textarea>
+                        <textarea rows="3" class="tags" placeholder="Write post description here..."></textarea>
+                        <input type="text" class="company-name" placeholder="Write comapny name here..."/>
+                        <div class="col-md-4 dropdown-options">
+                            <p data-toggle="dropdown" class="dropdown-selected">Select job type</p>
+                            <ul class="dropdown-menu">
+                              <li>Freelancer</li>
+                              <li>Contract</li>
+                              <li>Partner</li>
+                              <li>Full time</li>
+                              <li>Part time</li>
+                              <li>Consultancy</li>
+                              <li>Other</li>
+                            </ul>
+                          </div>
+                    </div>
+                    <div class="col-md-3 post-input">
+                        <input type="text" placeholder="Write salary..." class="salary"/>
+                        </div>
+                    <div class="col-md-4 dropdown-options">
+                        <p data-toggle="dropdown" class="dropdown-selected">Select term</p>
+                        <ul class="dropdown-menu">
+                          <li>Non-diclosed</li>
+                          <li>Daily</li>
+                          <li>Weekly</li>
+                          <li>Monthly</li>
+                          <li>Yearly</li>
+                          <li>Others</li>
+                        </ul>
+                      </div>
+                      <div class="col-md-5 dropdown-options">
+                        <p data-toggle="dropdown" class="dropdown-selected">Select category</p>
+                        <ul class="dropdown-menu">
+                          <li>None</li>
+                          <li>1 day</li>
+                          <li>1 week</li>
+                          <li>1 month</li>
+                          <li>1 year</li>
+                          <li>Specific time</li>
+                        </ul>
+                      </div>
+                      <div class="col-md-7 dropdown-options">
+                          <p data-toggle="dropdown" class="dropdown-selected">Select location</p>
+                          <ul class="dropdown-menu">
+                            <li>None</li>
+                            <li>1 day</li>
+                            <li>1 week</li>
+                            <li>1 month</li>
+                            <li>1 year</li>
+                            <li>Specific time</li>
+                          </ul>
+                        </div>
+                        
+                          <div class="col-md-5 dropdown-options">
+                              <p data-toggle="dropdown" class="dropdown-selected">Select post duration</p>
+                              <ul class="dropdown-menu">
+                                <li>None</li>
+                                <li>1 day</li>
+                                <li>1 week</li>
+                                <li>1 month</li>
+                                <li>1 year</li>
+                                <li>Specific time</li>
+                              </ul>
+                            </div>
+                            <div class="col-md-12 description-block">
+                                <textarea rows="3" class="tags" placeholder="Write tags here..."></textarea>
+                            </div>
+                </div>
+                <div class="post-button-block col-md-12">
+                    <div class="public">
+                      <img src="images/Public.svg"/>
+                      <span class="fa fa-chevron-down"></span>
+                    </div>
+                    <div class="add-image-video">
+                      <span id="add-image">Add Image</span>
+                      <span id="add-video">Add Video</span>
+                    </div>
+                    <div class="cancel-and-share">
+                      <input type="button" value="Cancel" class="cancel-btn">
+                      <input type="button" value="Share" class="share-bttn">
+                    </div>
+                  </div>
+              </div>
+          <div class="market-post post-option" id="market-post">
+            <div class="col-md-12">
+                <div class="col-md-12 description-block">
+                    <textarea  rows="2" class="your-ideas" placeholder="Write post titile..."></textarea>
+                    <textarea rows="3" class="tags" placeholder="Write post description here..."></textarea>
+                </div>
+                <div class="col-md-7 dropdown-options location">
+                    <p data-toggle="dropdown" class="dropdown-selected">Select location</p>
+                    <ul class="dropdown-menu">
+                      <li>General post</li>
+                      <li>Blog post</li>
+                      <li>Poll post</li>
+                    </ul>
+                  </div>
+                  <div class="col-md-5 dropdown-options">
+                    <p data-toggle="dropdown" class="dropdown-selected">Select category</p>
+                    <ul class="dropdown-menu">
+                      <li>None</li>
+                      <li>1 day</li>
+                      <li>1 week</li>
+                      <li>1 month</li>
+                      <li>1 year</li>
+                      <li>Specific time</li>
+                    </ul>
+                  </div>
+                  <div class="col-md-5 dropdown-options">
+                      <p data-toggle="dropdown" class="dropdown-selected">Select post duration</p>
+                      <ul class="dropdown-menu">
+                        <li>None</li>
+                        <li>1 day</li>
+                        <li>1 week</li>
+                        <li>1 month</li>
+                        <li>1 year</li>
+                        <li>Specific time</li>
+                      </ul>
+                    </div>
+                    <div class="col-md-3 post-input">
+                      <input type="text" class="price" placeholder="Write price..."/>
+                      </div>
+                      <div class="col-md-4 dropdown-options">
+                          <p data-toggle="dropdown" class="dropdown-selected">Select currency</p>
+                          <ul class="dropdown-menu">
+                            <li>None</li>
+                            <li>1 day</li>
+                            <li>1 week</li>
+                            <li>1 month</li>
+                            <li>1 year</li>
+                            <li>Specific time</li>
+                          </ul>
+                        </div>
+                        <div class="col-md-12 description-block">
+                            <textarea rows="3" class="tags" placeholder="Write tags here..."></textarea>
+                        </div>
+            </div>
+            <div class="post-button-block col-md-12">
+                <div class="public">
+                  <img src="images/Public.svg"/>
+                  <span class="fa fa-chevron-down"></span>
+                </div>
+                <div class="add-image-video">
+                  <span id="add-image">Add Image</span>
+                  <span id="add-video">Add Video</span>
+                </div>
+                <div class="cancel-and-share">
+                  <input type="button" value="Cancel" class="cancel-btn">
+                  <input type="button" value="Share" class="share-bttn">
+                </div>
+              </div>
+          </div>
+          <div class="add-general-post post-option" id="add-general-post">
             <div class="col-md-12">
             <div class="col-md-3 dropdown-options">
               <p data-toggle="dropdown" class="dropdown-selected">Select</p>
@@ -134,12 +377,12 @@
               </div>
               <div class="cancel-and-share">
                 <input type="button" value="Cancel" class="cancel-btn">
-                <input type="button" value="Share" class="share-btn">
+                <input type="button" value="Share" class="share-bttn">
               </div>
             </div>
         </div>
           
-          <div class="col-md-12 filter-list">
+          <div class="col-md-12 filter-list post-option" id="filter-block">
             <div class="col-md-3">
               <span>Select from</span>
               <p data-toggle="dropdown" class="dropdown-selected">Anyone</p>
@@ -179,7 +422,7 @@
           </div>
         </div>
         <div class="posts row">
-          <div class="post-block col-md-12">
+          <div class="post-block col-md-12 jobs">
             <div class="post-block-header">
               <div class="col-md-8">
                 <div class="user-post-profile-img">
@@ -221,7 +464,7 @@
               </div>
             </div>
           </div>
-          <div class="post-block col-md-12">
+          <div class="post-block col-md-12 general">
             <div class="post-block-header">
               <div class="col-md-8">
                 <div class="user-post-profile-img">
@@ -244,7 +487,12 @@
                 ><img src="images/Options.svg"
               /></span>
             </div>
-            <div class="post-body col-md-12  post-external-video">
+            <div class="post-body col-md-12  post-video">
+                <p class="post-text">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                    aliquyam erat, sed diam voluptua. At.
+                  </p>
               <span class="play-icon"></span>
               <div class="image-block"><video id="my-video" class="video-js" controls preload="auto" width="640" height="264"
                 poster="images/post-image.png" data-setup="{}">
@@ -255,11 +503,6 @@
                     <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
                   </p>
                 </video></div>
-              <div class="post-body-detail">
-                <a>Destination URL</a>
-                <p><a class="url-title">Url title comes here</a></p>
-                <a>Url Description comes here</a>
-              </div>
             </div>
             <div class="comment-and-like-block">
               <div class="col-md-4 like-btn">
@@ -273,7 +516,59 @@
               </div>
             </div>
           </div>
-          <div class="post-block col-md-12">
+          <div class="post-block col-md-12 market">
+              <div class="post-block-header">
+                <div class="col-md-8">
+                  <div class="user-post-profile-img">
+                    <span class="status-online"></span>
+                    <img src="images/Rectangle 65.png" />
+                  </div>
+                  <div class="post-detail">
+                    <p>
+                      <span class="user-name">Name</span>
+                      <span>shared a link</span>
+                    </p>
+                    <span class="designation">Designation-Film</span>
+                    <p>
+                      <img src="images/Public.svg" class="public-post-img" />
+                      <span> Time Posted </span>
+                    </p>
+                  </div>
+                </div>
+                <span class="post-option-btn"
+                  ><img src="images/Options.svg"
+                /></span>
+              </div>
+              <div class="post-body col-md-12  post-external-video">
+                <span class="play-icon"></span>
+                <div class="image-block"><video id="my-video" class="video-js" controls preload="auto" width="640" height="264"
+                  poster="images/post-image.png" data-setup="{}">
+                    <source src="Videos/Sample.mp4" type='video/mp4'>
+                    <source src="MY_VIDEO.webm" type='video/webm'>
+                    <p class="vjs-no-js">
+                      To view this video please enable JavaScript, and consider upgrading to a web browser that
+                      <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                    </p>
+                  </video></div>
+                <div class="post-body-detail">
+                  <a>Destination URL</a>
+                  <p><a class="url-title">Url title comes here</a></p>
+                  <a>Url Description comes here</a>
+                </div>
+              </div>
+              <div class="comment-and-like-block">
+                <div class="col-md-4 like-btn">
+                  <img src="images/like.svg" /><span>Like</span>
+                </div>
+                <div class="col-md-4 comment-btn">
+                  <img src="images/chat.svg" /><span>Comment</span>
+                </div>
+                <div class="col-md-4 share-btn">
+                  <img src="images/share.svg" /><span></span><span>Share</span>
+                </div>
+              </div>
+            </div>
+          <div class="post-block col-md-12 event">
             <div class="post-block-header">
               <div class="col-md-8">
                 <div class="user-post-profile-img">
@@ -332,7 +627,7 @@
               </div>
             </div>
           </div>
-          <div class="post-block col-md-12">
+          <div class="post-block col-md-12 jobs">
             <div class="post-block-header">
               <div class="col-md-8">
                 <div class="user-post-profile-img">
@@ -356,7 +651,7 @@
               /></span>
             </div>
             <div class="post-body col-md-12  post-external-image">
-              <div class="image-block"><img src="images/sample.jpg" /></div>
+              <div class="image-block"><a href="#"><img src="images/sample.jpg" /></a></div>
               <div class="post-body-detail">
                 <a>Destination URL</a>
                 <p><a class="url-title">Url title comes here</a></p>
@@ -375,7 +670,7 @@
               </div>
             </div>
           </div>
-          <div class="post-block col-md-12">
+          <div class="post-block col-md-12 general">
             <div class="post-block-header">
               <div class="col-md-8">
                 <div class="user-post-profile-img">
@@ -436,9 +731,65 @@
               </div>
             </div>
           </div>
+          <div class="post-block col-md-12 market">
+              <div class="post-block-header">
+                <div class="col-md-8">
+                  <div class="user-post-profile-img">
+                    <span class="status-offline"></span>
+                    <img src="images/Rectangle 65.png" />
+                  </div>
+                  <div class="post-detail">
+                    <p>
+                      <span class="user-name">Name</span>
+                      <span>shared a link</span>
+                    </p>
+                    <span class="designation">Designation-Film</span>
+                    <p>
+                      <img src="images/Public.svg" class="public-post-img" />
+                      <span> Time Posted </span>
+                    </p>
+                  </div>
+                </div>
+                <span class="post-option-btn"
+                  ><img src="images/Options.svg"
+                /></span>
+              </div>
+              <div class="post-body col-md-12  post-multiple-images">
+                <p class="post-text">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                  aliquyam erat, sed diam voluptua. At.
+                </p>
+                <div class="main-block">
+                  <div class="image-block">
+                    <img src="images/sample.jpg" />
+                  </div>
+                  <div class="sub-image-block col-md-2">
+                    
+                  </div>
+                </div>
+                <div class="post-body-detail">
+                  <a>Destination URL</a>
+                  <p><a class="url-title">Url title comes here</a></p>
+                  <a>Url Description comes here</a>
+                </div>
+              </div>
+              <div class="comment-and-like-block">
+                <div class="col-md-4 like-btn">
+                  <img src="images/like.svg" /><span>Like</span>
+                </div>
+                <div class="col-md-4 comment-btn">
+                  <img src="images/chat.svg" /><span>Comment</span>
+                </div>
+                <div class="col-md-4 share-btn">
+                  <img src="images/share.svg" /><span></span><span>Share</span>
+                </div>
+              </div>
+            </div>
         </div>
       </div>
       <div class="col-md-3">
+        <div class="nav-bar-right">
         <div class=" friend-request-block">
         <div class="main-block col-md-12">
           <div class="head-block">
@@ -530,6 +881,7 @@
           <div class="view-all"><span>View All</span></div>
         </div>
       </div>
+      <div id="scroller-anchor" class="col-md-12"></div> 
       <div class="popular-across-biztrique">
         <div class="main-block col-md-12">
           <div class="head-block">
@@ -621,6 +973,7 @@
           <div class="view-all"><span>View All</span></div>
         </div>
       </div>
+    </div>
       </div>
       <div class="col-md-2 chat-container">
         <div class="chat-block">
@@ -637,7 +990,7 @@
                       <span class="online_icon"></span>
                     </div>
                     <div class="user_info">
-                      <span>Maryam Naz</span>
+                      <span id="name">Maryam Naz</span>
                       <span class="status-online"></span>
                     </div>
                   </div>
@@ -649,7 +1002,7 @@
                       <span class="online_icon offline"></span>
                     </div>
                     <div class="user_info">
-                      <span>Sahar Darya</span>
+                      <span id="name">Sahar Darya</span>
                       <span class="status-time">1 hr</span>
                     </div>
                   </div>
@@ -661,7 +1014,7 @@
                       <span class="online_icon"></span>
                     </div>
                     <div class="user_info">
-                      <span>Yolduz Rafi</span>
+                      <span id="name">Yolduz Rafi</span>
                       <span class="status-busy"></span>
                     </div>
                   </div>
@@ -673,7 +1026,7 @@
                       <span class="online_icon offline"></span>
                     </div>
                     <div class="user_info">
-                      <span>Nargis Hawa</span>
+                      <span id="name">Nargis Hawa</span>
                       <span class="status-online"></span>
                     </div>
                   </div>
@@ -685,7 +1038,7 @@
                       <span class="online_icon offline"></span>
                     </div>
                     <div class="user_info">
-                      <span>Khadija Mehr</span>
+                      <span id="name">Khadija Mehr</span>
                       <span class="status-busy"></span>
                     </div>
                   </div>
@@ -697,7 +1050,7 @@
                         <span class="online_icon"></span>
                       </div>
                       <div class="user_info">
-                        <span>Maryam Naz</span>
+                        <span id="name">Maryam Naz</span>
                         <span class="status-online"></span>
                       </div>
                     </div>
@@ -709,7 +1062,7 @@
                         <span class="online_icon offline"></span>
                       </div>
                       <div class="user_info">
-                        <span>Sahar Darya</span>
+                        <span id="name">Sahar Darya</span>
                         <span class="status-time">1hr</span>
                       </div>
                     </div>
@@ -721,7 +1074,7 @@
                         <span class="online_icon"></span>
                       </div>
                       <div class="user_info">
-                        <span>Yolduz Rafi</span>
+                        <span id="name">Yolduz Rafi</span>
                         <span class="status-busy"></span>
                       </div>
                     </div>
@@ -733,7 +1086,7 @@
                         <span class="online_icon offline"></span>
                       </div>
                       <div class="user_info">
-                        <span>Nargis Hawa</span>
+                        <span id="name">Nargis Hawa</span>
                         <span class="status-online"></span>
                       </div>
                     </div>
@@ -745,7 +1098,7 @@
                         <span class="online_icon offline"></span>
                       </div>
                       <div class="user_info">
-                        <span>Khadija Mehr</span>
+                        <span id="name">Khadija Mehr</span>
                         <span class="status-busy"></span>
                       </div>
                     </div>
@@ -757,7 +1110,7 @@
                         <span class="online_icon"></span>
                       </div>
                       <div class="user_info">
-                        <span>Maryam Naz</span>
+                        <span id="name">Maryam Naz</span>
                         <span class="status-online"></span>
                       </div>
                     </div>
@@ -769,7 +1122,7 @@
                         <span class="online_icon offline"></span>
                       </div>
                       <div class="user_info">
-                        <span>Sahar Darya</span>
+                        <span id="name">Sahar Darya</span>
                         <span class="status-time">1hr</span>
                       </div>
                     </div>
@@ -781,7 +1134,7 @@
                         <span class="online_icon"></span>
                       </div>
                       <div class="user_info">
-                        <span>Yolduz Rafi</span>
+                        <span id="name">Yolduz Rafi</span>
                         <span class="status-busy"></span>
                       </div>
                     </div>
@@ -793,7 +1146,7 @@
                         <span class="online_icon offline"></span>
                       </div>
                       <div class="user_info">
-                        <span>Nargis Hawa</span>
+                        <span id="name">Nargis Hawa</span>
                         <span class="status-online"></span>
                       </div>
                     </div>
@@ -805,7 +1158,7 @@
                         <span class="online_icon offline"></span>
                       </div>
                       <div class="user_info">
-                        <span>Khadija Mehr</span>
+                        <span id="name">Khadija Mehr</span>
                         <span class="status-busy"></span>
                       </div>
                     </div>
@@ -822,20 +1175,31 @@
     </div>
     <script>
       $(document).ready(function() {
-        $("#filter-image").click(function() {
-          $(".filter-list").slideToggle();
-          $(".filter-list").css({ display: "flex" });
+        moveScroller();
+        $(".category").click(function(){
+          var dataTarget = $(this).attr("data-target");
+          $(this).siblings(".category").each(function(){
+            var a = $(this).attr("data-target");
+            $(a).slideUp();
+          });
+          $(dataTarget).slideToggle();
         });
-        $("#general-post").click(function(){
-          $(".add-general-post").slideToggle();
+        $(".navbar-list li").click(function(){
+          var value = $(this).attr("value");
+          if(value!="all"){
+          $(this).siblings("li").removeClass("selected");
+          $(this).addClass("selected");
+          $(".post-block").css({"display":"none"});
+          $("."+value).css({"display":"block"});
+          }
+          else{
+            $(this).siblings("li").removeClass("selected");
+          $(this).addClass("selected");
+            $(".post-block").css({"display":"block"});
+          }
+
         });
-        var h = window.outerHeight;
-        v = h - 130;
-        h = h - 130;
-        $(".posts").css({ "max-height": h });
-        $(".contacts_body").css({"max-height":v});
-        $(".contacts_body").css({"height":v});
-        $(".filter-list ul li").click(function() {
+        $(".post-option ul li").click(function() {
           $(this)
             .siblings()
             .removeClass("selected");
@@ -850,7 +1214,47 @@
             .siblings(".dropdown-selected")
             .append(value);
         });
+        $(".post-categories .category").click(function(){
+          if($(this).hasClass("show")){
+            $(this).removeClass("show");
+          }
+          else{
+            $(this).siblings(".category").removeClass("show");
+            $(this).addClass("show");
+          }
+        });
+        $(".contacts li").click(function(){
+          var name = $(this).find("#name").html();
+          var id = name.replace(" ","");
+          register_popup(id,name);
+        });
+        function moveScroller() {
+    var $anchor = $("#scroller-anchor");
+    var $scroller = $('.popular-across-biztrique');
+
+    var move = function() {
+        var st = $(window).scrollTop();
+        var ot = $anchor.offset().top;
+        if(st > ot) {
+            $scroller.css({
+                position: "fixed",
+                top: "0px",
+                width: "263px"
+            });
+        } else {
+            $scroller.css({
+                position: "relative",
+                top: "",
+                width: "auto"
+            });
+        }
+    };
+    $(window).scroll(move);
+    move();
+}
+        
       });
     </script>
+    <script src="./scripts/popup.js"></script>
   </body>
 </html>

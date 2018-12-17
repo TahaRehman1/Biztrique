@@ -19,7 +19,7 @@
   <body>
     <div class="header-div">
       <div class="container">
-        <img class="logo-img" src="./images/BiztriqueLogo.svg" />
+        <a href="index.html"><img class="logo-img" src="./images/BiztriqueLogo.svg" /></a>
         <div class="search-main">
           <input placeholder="Search" class="search-box" type="text" />
           <img src="images/search.svg" class="search-image" />
@@ -1378,6 +1378,7 @@
         v = h - 130;
         h = h - 130;
         $(".posts").css({ "max-height": h });
+		$(".profile-div").css({"max-height": h});
         $(".contacts_body").css({ "max-height": v });
         $(".contacts_body").css({ height: v });
         $(".filter-list ul li").click(function() {
