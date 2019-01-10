@@ -77,12 +77,13 @@ function register_popup(id, name) {
     "');\">&#10005;</a></div>";
   element =
     element +
-    '<div style="clear: both"></div></div><div class="popup-messages"><div class="message-send col-md-12"><div class="user-image"><img src="./images/Rectangle 65.png" /></div><div class="message"><p>Erat</p></div></div><div class="message-send col-md-12"><div class="user-image"><img src="./images/Rectangle 65.png" /></div><div class="message"><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt u</p></div></div><div class="message-receive col-md-12"><div class="user-image"><img src="./images/Rectangle 65.png" /></div><div class="message"><p>Erat</p></div></div><div class="message-receive col-md-12"><div class="user-image"><img src="./images/Rectangle 65.png" /></div><div class="message"><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p></div></div></div><div class="popup-input"><textarea placeholder="Enter text here..."></textarea><button class="btn-send">Send</button></div></div>';
+    '<div style="clear: both"></div></div><div class="popup-messages"><div class="message-send col-md-12"><div class="user-image"><img src="./images/Rectangle 65.png" /></div><div class="message"><p>Erat</p></div></div><div class="message-send col-md-12"><div class="user-image"><img src="./images/Rectangle 65.png" /></div><div class="message"><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt u</p></div></div><div class="message-receive col-md-12"><div class="user-image"><img src="./images/Rectangle 65.png" /></div><div class="message"><p>Erat</p></div></div><div class="message-receive col-md-12"><div class="user-image"><img src="./images/Rectangle 65.png" /></div><div class="message"><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p></div></div></div><div class="popup-input"><textarea placeholder="Enter text here..." class="message-input"></textarea><button class="btn-send">Send</button></div></div>';
   element =
     element +
     '<script>$("#c-' +
     id +
-    '").on("click", function () {if($(this).parent().parent().hasClass("up")){$(this).parent().parent().animate({height:37},500).removeClass("up");}else{$(this).parent().parent().animate({height:320},500).addClass("up"); }});</script>';
+    '").on("click", function () {if($(this).parent().parent().hasClass("up")){$(this).parent().parent().animate({height:37},500).removeClass("up");}else{$(this).parent().parent().animate({height:320},500).addClass("up"); }});' +
+    "</script>";
   $("body").append(element);
   popups.unshift(id);
 

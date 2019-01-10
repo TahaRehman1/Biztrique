@@ -30,15 +30,15 @@
   top: 0;
   z-index: 9999;
 }
-p {
-  font-family: Roboto-Light;
-}
 .body-container {
   margin-top: 80px;
   padding: 0;
 }
 .fa.search::after {
   content: "\f002";
+}
+.profile-div {
+  overflow-y: auto;
 }
 .fa.search {
   position: absolute;
@@ -55,13 +55,6 @@ p {
   width: 0px;
   background: transparent; /* make scrollbar transparent */
   display: none;
-}
-.chat-container,
-.navbar-div-categories,
-.main-body,
-.categories-list {
-  -ms-overflow-style: none;
-  overflow: -moz-scrollbars-none;
 }
 span {
   font-family: Roboto-Light;
@@ -113,15 +106,14 @@ body {
   padding-right: 0;
 }
 .friend-request-block .user-detail,
-.popular-across-biztrique .user-detail {
+.popular-across-biztrique .user-detail,
+.user_info {
   width: 64%;
   float: left;
 }
 .user_info {
-  width: 88%;
   padding: 4px;
   padding-left: 10px;
-  float: left;
 }
 .friend-request-block .head-block,
 .popular-across-biztrique .head-block,
@@ -181,7 +173,7 @@ body {
   font-family: Roboto-Light;
   cursor: pointer;
 }
-.primary-filters li:hover,
+.navbar-list li:hover,
 .categories-list li:hover {
   background: #e1e1e1;
   color: #ff7e41;
@@ -189,14 +181,11 @@ body {
 .post-categories p {
   font-family: Roboto-Bold;
 }
-.post-categories {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-}
 #sub-category {
-  width: 16%;
+  width: 20%;
   padding: 9px;
   text-align: right;
+  border-top-right-radius: 5px;
 }
 .post-option {
   width: 99.6% !important;
@@ -223,25 +212,16 @@ body {
   padding: 10px;
   margin-bottom: 6px;
   outline: none;
-  padding-top: 25px;
-  padding-left: 13px;
-  font-size: 14px;
-  font-family: Robot-Medium;
 }
 .post-option .dropdown-options,
-.add-general-post .dropdown-options,
 .post-option input[type="text"] {
   border: 1px solid #e1e1e1;
   padding: 10px;
   margin: 3px;
   border-radius: 5px;
-  height: 56px;
-}
-.add-general-post {
-  display: none;
-  width: 100% !important;
 }
 .add-general-post .dropdown-selected {
+  padding-top: 7px;
   font-family: Roboto-Light;
 }
 .post-multiple-images .image-block img {
@@ -253,14 +233,10 @@ body {
 }
 .filter-list .col-md-3 {
   background: #fff;
+  border-radius: 5px;
   padding-top: 7px;
   margin-left: 10px;
   cursor: pointer;
-  border: 1px solid #e1e1e1;
-  padding: 10px;
-  margin: 3px;
-  border-radius: 5px;
-  height: 56px;
 }
 .post-button-block {
   width: 100% !important;
@@ -268,22 +244,13 @@ body {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.post-option .dropdown-menu li {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 1;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  max-height: 30px;
-}
-.dropdown-selected::before {
+.dropdown-selected:after {
   content: "\25bc";
   float: right;
   font-size: 9px;
   position: absolute;
   right: 5px;
   color: #737070;
-  top: 22px;
 }
 .dropdown-menu li:hover {
   background: #e1e1e1;
@@ -304,21 +271,21 @@ body {
   border: none;
   box-shadow: 0px 2px 5px 1px #888;
   top: 112%;
-  left: -18px;
+  left: -50px;
 }
 .chat-block .status-busy,
 .chat-block .status-online,
 .chat-block .status-time {
-  right: -5px;
+  right: -156px;
   position: relative;
+  top: -16px;
   display: block;
-  float: right;
-  top: 0px;
 }
 .chat-block .post-option-btn {
   right: 2px !important;
 }
 .chat-block .status-time {
+  right: -137px;
   font-family: Roboto-Light;
 }
 .dropdown-menu li,
@@ -385,7 +352,7 @@ body {
 }
 .fa-caret-down:before {
   background: #fff;
-  margin-left: -4px;
+  margin-left: -3px;
   padding-top: 6px;
   padding-bottom: 8px;
   padding-left: 2px;
@@ -402,10 +369,6 @@ body {
 #sub-category img {
   width: 18px;
   cursor: pointer;
-  display: inline-block !important;
-}
-.filter-img.show {
-  background: #e1e1e1;
 }
 .status-online {
   height: 10px;
@@ -421,7 +384,7 @@ body {
   height: 10px;
   width: 10px;
   background-color: #ff7e41;
-  border: 1px solid #565b81;
+  border: 1px solid #ffffff;
   border-radius: 50%;
   display: inline-block;
   position: absolute;
@@ -537,7 +500,7 @@ body {
   border-radius: 50% !important;
 }
 .img_cont {
-  width: 12%;
+  width: 32px;
   float: left;
 }
 .search-block .post-option-btn {
@@ -558,15 +521,6 @@ body {
   border: 0.5px solid #e1e1e1;
   padding: 3px;
   padding-left: 25px;
-  width: 92%;
-}
-.my-activity-filters,
-.my-network-filters,
-.my-favorite-filters,
-.my-events-filters,
-.my-jobs-filters,
-.my-classified-filters {
-  display: none;
 }
 .contacts li {
   list-style: none;
@@ -659,6 +613,7 @@ body {
 }
 #general-post {
   width: 25%;
+  border-top-left-radius: 5px;
 }
 .comment-and-like-block .like-btn {
   border-left: none;
@@ -698,7 +653,6 @@ body {
   margin-left: 4px;
 }
 .search-box {
-  padding-right: 32px;
   height: 60px;
   background: #494d6e;
   border: none;
@@ -784,7 +738,7 @@ body {
 }
 .header-msg-img,
 .header-not-img {
-  width: 24px;
+  width: 30px;
 }
 #user-accounts,
 #user-accounts ul li {
@@ -1083,31 +1037,6 @@ body {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.appearance {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-}
-.user-inputs {
-  font-family: "Roboto-Medium";
-  font-size: 14px;
-  border: none;
-  background: transparent;
-  margin: 0 0 10px;
-  outline: none;
-  width: 100%;
-  overflow: hidden;
-  height: auto;
-  resize: none;
-}
-
-#profile-main textarea {
-  min-height: 140px;
-}
-.editable {
-  border: 1px solid #e1e1e1;
-  margin-bottom: 4px;
-}
 #profile-network .my-networks .col-md-4 p {
   margin-bottom: 0px;
   margin-top: 5px;
@@ -1229,9 +1158,7 @@ body {
   float: left;
   margin-top: 3px;
 }
-.show-navbar-item {
-  display: block !important;
-}
+<<<<<<< HEAD
 .navbar-div-categories {
   margin-top: 10px;
 }
@@ -1242,13 +1169,6 @@ body {
 .category.show {
   background: #e1e1e1;
 }
-.hide-navbar-item {
-  display: none;
-}
-.event-submenu,
-.network-submenu {
-  margin-top: 10px;
-}
 .category.show::after {
   content: "";
   width: 0;
@@ -1257,20 +1177,8 @@ body {
   border-right: 12px solid transparent;
   border-top: 10px solid #e1e1e1;
   position: absolute;
-  margin-top: 26px;
+  top: 36px;
   margin-left: -47px;
-}
-.classified-header {
-  display: none;
-}
-#market.category.show::after {
-  margin-left: -48px;
-}
-#event.category.show::after {
-  margin-left: -26px;
-}
-#jobs.category.show::after {
-  margin-left: -25px;
 }
 .popup-box {
   display: none;
@@ -1284,10 +1192,7 @@ body {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
-.hand-shake,
-.cancel-request {
-  float: left;
-}
+
 .popup-box .popup-head {
   background-color: #f9f9f9;
   color: #000;
@@ -1312,99 +1217,11 @@ body {
   text-decoration: none;
   color: inherit;
 }
-.help-divs {
-  background: #fff;
-  border: 0.5px solid #e1e1e1;
-}
-.general-help-block {
-  height: 95vh;
-}
-.help-head-div {
-  padding: 10px;
-  font-family: "Roboto-Medium";
-  font-size: 12px;
-  border-bottom: 0.5px solid #e1e1e1;
-}
-.help-head-div p {
-  margin-bottom: 0;
-}
-.header-links li a:hover {
-  color: #fff;
-}
-.header-links li a {
-  color: #fff;
-}
-.event-features-div,
-.event-desc-div {
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-.event-desc-div {
-  padding-left: 0px;
-}
-.event-desc-div .event-title {
-  font-size: 14px;
-  font-family: "Roboto-Medium";
-  padding-left: 0px;
-}
-.event-desc-div .event-short-desc {
-  font-family: "Roboto-Light";
-  font-size: 12px;
-}
-.event-short-desc .read-more-link {
-  font-size: 12px;
-  font-family: "Roboto-Light";
-  color: #ff7e41;
-}
-.event-post-categories #event {
-  width: 87% !important;
-  font-family: "Roboto-Medium";
-}
 
 .popup-box .popup-messages {
   height: 75%;
   overflow-y: scroll;
   background: #fff;
-}
-.event-post-categories .event-sub {
-  width: 13% !important;
-}
-.event-post-categories .event-sub .header-msg-img {
-  width: 24px;
-}
-.event-sub .fa-plus {
-  float: left;
-  color: #ececec;
-  font-size: 16px;
-  font-weight: 100;
-  margin-top: 3px;
-}
-.events-subnav {
-  margin-top: 10px;
-}
-.events-subnav ul li {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-.events-subnav ul li:hover {
-}
-.submenu-select {
-  border: none;
-  margin-left: -3px;
-  cursor: pointer;
-  width: 100%;
-}
-.submenu-select:hover {
-  color: black;
-}
-.tags-search {
-  border: none;
-  width: 86%;
-  float: left;
-}
-.tags-search-img {
-  width: 16px;
-  height: 17px;
 }
 .popup-input textarea {
   width: 80%;
@@ -1464,6 +1281,152 @@ body {
   z-index: 9999;
   -webkit-border-radius: 0 0 10px 10px;
   border-radius: 0 0 10px 10px;
+}
+.post-option {
+  width: 99.6% !important;
+  display: none;
+}
+.market-post .col-md-5,
+.event-post .col-md-5,
+.job-post .col-md-5 {
+  width: 38.5%;
+}
+.market-post .col-md-4,
+.event-post .col-md-4 {
+  width: 32%;
+}
+.post-option .dropdown-selected,
+.market-post p,
+.event-post p {
+  font-family: Roboto-Light;
+}
+.location .dropdown-selected::after {
+  content: "\f041";
+}
+.company-name {
+  width: 60% !important;
+  float: left;
+  margin: 0 !important;
+  padding: 15px !important;
+}
+.description-block .dropdown-options {
+  margin-top: 0;
+  width: 38.6%;
+}
+.post-option input[type="text"] {
+  width: 100%;
+  padding: 15px;
+  outline: none;
+}
+.job-post .col-md-5 {
+  margin-bottom: 11px;
+}
+.post-input {
+  padding: 8px;
+  padding-left: 0;
+  padding-top: 0;
+=======
+.show-navbar-item {
+  display: block !important;
+}
+.hide-navbar-item {
+  display: none;
+}
+.event-submenu,
+.network-submenu {
+  margin-top: 10px;
+}
+.help-divs {
+  background: #fff;
+  border: 0.5px solid #e1e1e1;
+}
+.general-help-block {
+  height: 95vh;
+}
+.help-head-div {
+  padding: 10px;
+  font-family: "Roboto-Medium";
+  font-size: 12px;
+  border-bottom: 0.5px solid #e1e1e1;
+}
+.help-head-div p {
+  margin-bottom: 0;
+}
+.header-links li a:hover {
+  color: #fff;
+}
+.header-links li a {
+  color: #fff;
+}
+.event-features-div,
+.event-desc-div {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.event-desc-div {
+  padding-left: 0px;
+}
+.event-desc-div .event-title {
+  font-size: 14px;
+  font-family: "Roboto-Medium";
+  padding-left: 0px;
+}
+.event-desc-div .event-short-desc {
+  font-family: "Roboto-Light";
+  font-size: 12px;
+}
+.event-short-desc .read-more-link {
+  font-size: 12px;
+  font-family: "Roboto-Light";
+  color: #ff7e41;
+}
+.event-post-categories #event {
+  width: 87% !important;
+  font-family: "Roboto-Medium";
+}
+.event-post-categories .event-sub {
+  width: 13% !important;
+}
+.event-post-categories .event-sub .header-msg-img {
+  width: 24px;
+}
+.event-sub .fa-plus {
+  float: left;
+  color: #ececec;
+  font-size: 16px;
+  font-weight: 100;
+  margin-top: 3px;
+}
+.events-subnav {
+  margin-top: 10px;
+}
+.events-subnav ul li {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.events-subnav ul li:hover {
+  background: #fff;
+  color: #000;
+  border-right: 0.5px solid #e1e1e1;
+}
+.submenu-select {
+  border: none;
+  margin-left: -3px;
+  cursor: pointer;
+  width: 100%;
+}
+.submenu-select:hover {
+  color: black;
+}
+.tags-search {
+  border: none;
+  width: 86%;
+  float: left;
+}
+.tags-search-img {
+  width: 16px;
+  height: 17px;
+  float: left;
   margin-top: 2px;
 }
 .tags-search-li {
@@ -1486,60 +1449,14 @@ body {
 .job-poster {
   height: auto !important;
 }
-.post-option {
-  width: 99.6% !important;
-  display: none;
-}
 .job-short-desc {
   font-size: 12px !important;
   font-family: "Roboto-Light" !important;
-}
-.market-post .col-md-5,
-.event-post .col-md-5,
-.job-post .col-md-5 {
-  width: 38.5%;
 }
 .job-short-desc .read-more-link {
   font-size: 12px !important;
   font-family: "Roboto-Light" !important;
   color: #ff7e41;
-}
-
-.post-option .dropdown-selected,
-.market-post p,
-.event-post p {
-  font-family: Roboto-Light;
-}
-.dropdown-head {
-  display: none;
-  font-size: 11px;
-}
-.post-option .dropdown-selected.selected {
-  font-family: Roboto-Medium;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 1;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  max-height: 33px;
-  margin-top: 2px;
-}
-.post-option .dropdown-selected {
-  margin: 8px 0 5px;
-}
-.location .dropdown-selected::before {
-  content: "\f041";
-}
-.company-name {
-  width: 60% !important;
-  float: left;
-  margin: -1px !important;
-  padding-left: 14px !important;
-}
-.description-block .dropdown-options {
-  margin-top: -1px;
-  width: 38.8%;
-  margin-left: 4px;
 }
 .job-desc-div {
   padding-right: 0;
@@ -1562,22 +1479,6 @@ body {
   border-left: none;
   padding-left: 10px !important;
   overflow: hidden;
-}
-.post-option input[type="text"] {
-  width: 100%;
-  padding: 15px;
-  outline: none;
-  padding-left: 10px;
-  font-family: Roboto-Medium;
-  padding-top: 34px;
-}
-.job-post .col-md-5 {
-  margin-bottom: 11px;
-}
-.post-input {
-  padding: 8px;
-  padding-left: 0;
-  padding-top: 0;
 }
 .market-filter-li .col-md-6 {
   padding: 0;
@@ -1602,195 +1503,5 @@ body {
 }
 .events-subnav ul li {
   border-bottom: 0.5px solid #e1e1e1;
-}
-.floating-label {
-  position: absolute;
-  pointer-events: none;
-  margin-top: 22px;
-  transition: 0.2s ease all;
-  color: #000;
-  font-size: 14px;
-  font-family: Roboto-Light;
-  font-weight: 400;
-  padding: 14px;
-}
-.post-input .floating-label {
-  margin-top: 7px;
-}
-.description-block .floating-label {
-  margin-top: 6px;
-}
-.search-main .floating-label {
-  color: #fff;
-  margin-left: 40px;
-  padding: 0;
-}
-.modal-dialog {
-  top: 10%;
-}
-.modal-footer {
-  text-align: right;
-  padding: 0;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  border-top: none;
-  background: #f9f9f9;
-  border-top: 0.5px solid #e1e1e1;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-.modal-footer button,
-.modal-footer button:hover {
-  width: 100%;
-  border-radius: 0px;
-  border-bottom: none;
-  background: transparent;
-  border: none;
-  outline: none;
-}
-.modal-title {
-  font-size: 14px;
-  font-family: Roboto-Medium;
-}
-#SourceListDopdown img {
-  margin-right: 7px;
-  width: 28px;
-}
-.radio-bttns .col-md-6 {
-  padding: 0;
-}
-.location-block {
-  margin-top: 40px;
-}
-.radio-bttns input {
-  margin-right: 6px;
-}
-.radio-bttns .col-md-6:last-child {
-  text-align: right;
-}
-.radio-bttns {
-  margin-bottom: 20px;
-}
-#selectLocation .modal-content {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-}
-#searchSourceList,
-.model-input {
-  width: 100%;
-  font-size: 16px;
-  border: 1px solid #ddd;
-  margin-bottom: 0px;
-  padding: 20px;
-  outline: none;
-  padding-left: 13px;
-}
-#market {
-  width: 22.5%;
-}
-.empty-block .post-body,
-.post-variation {
-  text-align: center;
-  padding-top: 30%;
-  padding-bottom: 30%;
-  border-top: none;
-}
-.empty-block .post-body {
-  border-bottom: 0.5px solid #e1e1e1;
-}
-.post-variation {
-  background: #f9f9f9;
-}
-.btn-empty {
-  padding: 10px;
-  background: transparent;
-  border: 0.5px solid #e1e1e1;
-  font-family: Roboto-Medium;
-}
-.advance-filter .reset {
-  color: red;
-}
-.empty-block,
-.reset {
-  display: none;
-}
-.selected-user-post {
-  width: 100% !important;
-  padding: 10px !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  border: 0.5px solid #e1e1e1;
-  display: none;
-}
-.selected-user-post img {
-  width: 24px;
-  margin-left: 6px;
-  margin-right: 6px;
-}
-.selected-user-post .arrow {
-  float: right;
-}
-#SourceListDopdown,
-#locationLists {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: none;
-}
-.source-active {
-  padding-top: 30px !important;
-  padding-left: 9px !important;
-}
-.source-active span {
-  font-family: Roboto-Medium;
-}
-#SourceListDopdown li a,
-#locationLists li a {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #ffffff;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 12px;
-  font-family: Roboto-Medium;
-  color: black;
-  display: block;
-}
-.modal-body .floating-label {
-  margin-top: 7px;
-}
-.popup-input .floating-label {
-  margin-top: 0;
-  left: 0;
-}
-#SourceListDopdown li a:hover:not(.header) {
-  background-color: #eee;
-}
-@media (max-width: 1200px) {
-  .nav-bar-left {
-    width: 138px;
-  }
-  .btn-options {
-    width: 28%;
-  }
-  .friend-request-block .user-detail,
-  .popular-across-biztrique .user-detail {
-    width: 55%;
-  }
-  #jobs {
-    width: 17%;
-  }
-  #sub-category {
-    width: 15%;
-  }
-  #market {
-    width: 22.5%;
-  }
-  #general-post {
-    width: 27%;
-  }
-  .container {
-    width: 992px;
-  }
+>>>>>>> origin/master
 }

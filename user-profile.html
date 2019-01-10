@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="./style/bootstrap.min.css" />
     <link rel="stylesheet" href="./style/styles.css" />
     <link rel="stylesheet" href="./style/video-js.css" />
-    <link rel="stylesheet" href="./style/jquery-ui.css"/>
     <link
       href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
       rel="stylesheet"
@@ -16,8 +15,6 @@
     <script src="./scripts/jquery.min.js"></script>
     <script src="./scripts/bootstrap.min.js"></script>
     <script src="./scripts/video.js"></script>
-    <script src="./scripts/jquery-ui.js"></script>
-    <script src="./scripts/jquery.ddslick.min.js"></script>
   </head>
   <body>
     <div class="header-div">
@@ -90,83 +87,85 @@
                     <p class="profile-head-name">Send Invite</p>
                   </div>
         <div class="navbar-div">
-          <div class="my-activity-filters">
-            <div class="head-block">
-                <span>Primary Filters</span>
-              </div>
-            <ul class="navbar-list primary-filters">
-                <li class="selected" value="all" data-target="#profile-activity">All Activity</li>
-                <li value="general">General Posts</li>
-                <li value="market">Market Posts</li>
-                <li value="event">Event Posts</li>
-                <li value="jobs">Job Posts</li>
-              </ul>
-          </div>
-          <div class="my-profile-filters">
+          <div class="navbar-div">
+            <div class="my-activity-filters">
+              <div class="head-block">
+                  <span>Primary Filters</span>
+                </div>
               <ul class="navbar-list primary-filters">
-                  <li class="selected" value="overview">Overview</li>
-                  <li value="contact-info">Contact Information</li>
-                  <li value="education">Education</li>
-                  <li value="experience">Experience</li>
-                  <li value="interest">Interest</li>
-                  <li value="skills">Skills</li>
+                  <li class="selected" value="all" data-target="#profile-activity">All Activity</li>
+                  <li value="general">General Posts</li>
+                  <li value="market">Market Posts</li>
+                  <li value="event">Event Posts</li>
+                  <li value="jobs">Job Posts</li>
                 </ul>
             </div>
-            <div class="my-network-filters">
-                <div class="head-block">
-                    <span>Primary Filters</span>
-                  </div>
+            <div class="my-profile-filters">
                 <ul class="navbar-list primary-filters">
-                    <li class="selected" value="all" data-target="#profile-network">All Networks</li>
-                    <li value="contact-info">People</li>
-                    <li value="education">Companies</li>
+                    <li class="selected" value="overview">Overview</li>
+                    <li value="contact-info">Contact Information</li>
+                    <li value="education">Education</li>
+                    <li value="experience">Experience</li>
+                    <li value="interest">Interest</li>
+                    <li value="skills">Skills</li>
                   </ul>
               </div>
-              <div class="my-favorite-filters">
+              <div class="my-network-filters">
                   <div class="head-block">
                       <span>Primary Filters</span>
                     </div>
                   <ul class="navbar-list primary-filters">
-                      <li class="selected" value="all" data-target="#profile-favorites">All Favorites</li>
-                      <li value="my-fav-people">People</li>
-                      <li value="my-fav-companies">Company</li>
-                      <li value="my-fav-products">Market</li>
-                      <li value="my-fav-events">Events</li>
-                      <li value="my-fav-jobs">Jobs</li>
+                      <li class="selected" value="all" data-target="#profile-network">All Networks</li>
+                      <li value="contact-info">People</li>
+                      <li value="education">Companies</li>
                     </ul>
                 </div>
-                <div class="my-events-filters">
+                <div class="my-favorite-filters">
                     <div class="head-block">
                         <span>Primary Filters</span>
                       </div>
                     <ul class="navbar-list primary-filters">
-                        <li class="selected" value="all" data-target="#profile-events">All Events</li>
-                        <li value="accepted">Accepted</li>
-                        <li value="tentative">Tentative</li>
-                        <li value="not-attending">Not Attending</li>
+                        <li class="selected" value="all" data-target="#profile-favorites">All Favorites</li>
+                        <li value="my-fav-people">People</li>
+                        <li value="my-fav-companies">Company</li>
+                        <li value="my-fav-products">Market</li>
+                        <li value="my-fav-events">Events</li>
+                        <li value="my-fav-jobs">Jobs</li>
                       </ul>
                   </div>
-                  <div class="my-classified-filters">
+                  <div class="my-events-filters">
                       <div class="head-block">
                           <span>Primary Filters</span>
                         </div>
                       <ul class="navbar-list primary-filters">
-                          <li class="selected" value="all" data-target="#profile-classified">All Products</li>
-                          <li value="selling">Selling</li>
-                          <li value="unavailable">Unavailable</li>
-                          <li value="sold">Sold</li>
+                          <li class="selected" value="all" data-target="#profile-events">All Events</li>
+                          <li value="accepted">Accepted</li>
+                          <li value="tentative">Tentative</li>
+                          <li value="not-attending">Not Attending</li>
                         </ul>
                     </div>
-                    <div class="my-jobs-filters">
+                    <div class="my-classified-filters">
                         <div class="head-block">
                             <span>Primary Filters</span>
                           </div>
                         <ul class="navbar-list primary-filters">
-                            <li class="selected" value="all" data-target="#profile-jobs">All Jobs</li>
-                            <li value="applied">Applied</li>
-                            <li value="not-applied">Not Applied</li>
+                            <li class="selected" value="all" data-target="#profile-classified">All Products</li>
+                            <li value="selling">Selling</li>
+                            <li value="unavailable">Unavailable</li>
+                            <li value="sold">Sold</li>
                           </ul>
                       </div>
+                      <div class="my-jobs-filters">
+                          <div class="head-block">
+                              <span>Primary Filters</span>
+                            </div>
+                          <ul class="navbar-list primary-filters">
+                              <li class="selected" value="all" data-target="#profile-jobs">All Jobs</li>
+                              <li value="applied">Applied</li>
+                              <li value="not-applied">Not Applied</li>
+                            </ul>
+                        </div>
+          </div>
         </div>
         <div class="navbar-div event-submenu">
             <ul class="navbar-list">
@@ -204,377 +203,6 @@
         <div class="profile-div row">
             <div class="activity-block profile-divs" id="profile-activity">
                 <div class="col-md-12 post-list">
-                    <div class="post-categories  row">
-                        <div class="col-md-12 selected-user-post">
-                          <img src="images/Rectangle 102.png"><span class="user-name">Adele Johnson</span>
-                          <span class="fa arrow"></span>
-                        </div>
-                        <div id="general-post" class="category show" data-target="#add-general-post">
-                          <span class="fa arrow"></span>General Post
-                        </div>
-                        <div id="market" class="category" data-target="#market-post"><span class="fa arrow"></span>Market</div>
-                        <div id="event" class="category" data-target="#event-post"><span class="fa arrow"></span>Event</div>
-                        <div id="jobs" class="category" data-target="#job-post"><span class="fa arrow"></span>Jobs</div>
-                        <div id="sub-category" class="">
-                          <img class="header-msg-img" src="./images/Sort.svg" />
-                          <img
-                            class="header-msg-img filter-img"
-                            src="./images/Filter.svg"
-                            id="filter-image"
-                            data-target="#filter-block"/>
-                        </div>
-                        <div class="event-post post-option" id="event-post">
-                            <div class="col-md-12">
-                                <div class="col-md-12 description-block">
-                                    <div>
-                                        <label class="floating-label">Share your ideas, photos and videos etc</label>
-                                        <textarea  rows="5" class="your-ideas" placeholder=""></textarea>
-                                      </div>
-                                      <div>
-                                        <label class="floating-label">Write tags here...</label>
-                                        <textarea class="tags" placeholder=""></textarea>
-                                      </div>
-                                </div>
-                                <div class="col-md-7 dropdown-options location">
-                                    <span class="dropdown-head">Select location</span>
-                                    <p data-toggle="dropdown" class="dropdown-selected">Select location</p>
-                                    <ul class="dropdown-menu">
-                                      <li>General post</li>
-                                      <li>Blog post</li>
-                                      <li>Poll post</li>
-                                    </ul>
-                                  </div>
-                                  <div class="col-md-5 dropdown-options">
-                                      <span class="dropdown-head">Select category</span>
-                                    <p data-toggle="dropdown" class="dropdown-selected">Select category</p>
-                                    <ul class="dropdown-menu">
-                                      <li>None</li>
-                                      <li>1 day</li>
-                                      <li>1 week</li>
-                                      <li>1 month</li>
-                                      <li>1 year</li>
-                                      <li class="specfic-s">Specific time</li>
-                                    </ul>
-                                  </div>
-                                  <div class="col-md-5 dropdown-options">
-                                      <span class="dropdown-head">Select post duration</span>
-                                      <p data-toggle="dropdown" class="dropdown-selected">Select post duration</p>
-                                      <ul class="dropdown-menu">
-                                        <li>None</li>
-                                        <li>1 day</li>
-                                        <li>1 week</li>
-                                        <li>1 month</li>
-                                        <li>1 year</li>
-                                        <li class="specfic-s">Specific time</li>
-                                      </ul>
-                                    </div>
-                                      <div class="col-md-3 post-input">
-                                          <label class="floating-label">Write fee...</label> 
-                                          <input type="text" placeholder="" class="fee"/>
-                                          </div>
-                                      <div class="col-md-4 dropdown-options">
-                                          <span class="dropdown-head">Select currency</span>
-                                          <p data-toggle="dropdown" class="dropdown-selected">Select currency</p>
-                                          <ul class="dropdown-menu">
-                                            <li>None</li>
-                                            <li>1 day</li>
-                                            <li>1 week</li>
-                                            <li>1 month</li>
-                                            <li>1 year</li>
-                                            <li class="specfic-s">Specific time</li>
-                                          </ul>
-                                        </div>
-                                        <div class="col-md-12 description-block">
-                                            <label class="floating-label">Write tags here...</label> 
-                                            <textarea rows="3" class="tags" placeholder=""></textarea>
-                                        </div>
-                            </div>
-                            <div class="post-button-block col-md-12">
-                                <div class="public">
-                                  <img src="images/Public.svg"/>
-                                  <span class="fa fa-chevron-down"></span>
-                                </div>
-                                <div class="add-image-video">
-                                  <span id="add-image">Add Image</span>
-                                  <span id="add-video">Add Video</span>
-                                </div>
-                                <div class="cancel-and-share">
-                                  <input type="button" value="Cancel" class="cancel-btn">
-                                  <input type="button" value="Share" class="share-bttn">
-                                </div>
-                              </div>
-                          </div>
-                          <div class="job-post post-option" id="job-post">
-                              <div class="col-md-12">
-                                  <div class="col-md-12 description-block">
-                                      <div>
-                                          <label class="floating-label">Share your ideas, photos and videos etc</label>
-                                          <textarea  rows="5" class="your-ideas" placeholder=""></textarea>
-                                        </div>
-                                        <div>
-                                          <label class="floating-label">Write tags here...</label>
-                                          <textarea class="tags" placeholder=""></textarea>
-                                        </div>
-                                      <label class="floating-label">Write comapny name here...</label> 
-                                      <input type="text" class="company-name" placeholder=""/>
-                                      <div class="col-md-4 dropdown-options">
-                                          <span class="dropdown-head">Select job type</span>
-                                          <p data-toggle="dropdown" class="dropdown-selected">Select job type</p>
-                                          <ul class="dropdown-menu">
-                                            <li>Freelancer</li>
-                                            <li>Contract</li>
-                                            <li>Partner</li>
-                                            <li>Full time</li>
-                                            <li>Part time</li>
-                                            <li>Consultancy</li>
-                                            <li class="specfic-s">Other</li>
-                                          </ul>
-                                        </div>
-                                  </div>
-                                  <div class="col-md-3 post-input">
-                                      <label class="floating-label">Write salary...</label> 
-                                      <input type="text" placeholder="" class="salary"/>
-                                      </div>
-                                  <div class="col-md-4 dropdown-options">
-                                      <span class="dropdown-head">Select term</span>
-                                      <p data-toggle="dropdown" class="dropdown-selected">Select term</p>
-                                      <ul class="dropdown-menu">
-                                        <li>Non-diclosed</li>
-                                        <li>Daily</li>
-                                        <li>Weekly</li>
-                                        <li>Monthly</li>
-                                        <li>Yearly</li>
-                                        <li class="specfic-s">Others</li>
-                                      </ul>
-                                    </div>
-                                    <div class="col-md-5 dropdown-options">
-                                        <span class="dropdown-head">Select category</span>
-                                      <p data-toggle="dropdown" class="dropdown-selected">Select category</p>
-                                      <ul class="dropdown-menu">
-                                        <li>None</li>
-                                        <li>1 day</li>
-                                        <li>1 week</li>
-                                        <li>1 month</li>
-                                        <li>1 year</li>
-                                        <li class="specfic-s">Specific time</li>
-                                      </ul>
-                                    </div>
-                                    <div class="col-md-7 dropdown-options">
-                                        <span class="dropdown-head">Select location</span>
-                                        <p data-toggle="dropdown" class="dropdown-selected">Select location</p>
-                                        <ul class="dropdown-menu">
-                                          <li>None</li>
-                                          <li>1 day</li>
-                                          <li>1 week</li>
-                                          <li>1 month</li>
-                                          <li>1 year</li>
-                                          <li class="specfic-s">Specific time</li>
-                                        </ul>
-                                      </div>
-                                      
-                                        <div class="col-md-5 dropdown-options">
-                                            <span class="dropdown-head">Select post duration</span>
-                                            <p data-toggle="dropdown" class="dropdown-selected">Select post duration</p>
-                                            <ul class="dropdown-menu">
-                                              <li>None</li>
-                                              <li>1 day</li>
-                                              <li>1 week</li>
-                                              <li>1 month</li>
-                                              <li>1 year</li>
-                                              <li class="specfic-s">Specific time</li>
-                                            </ul>
-                                          </div>
-                                          <div class="col-md-12 description-block">
-                                              <label class="floating-label">Write tags here...</label> 
-                                              <textarea rows="3" class="tags" placeholder=""></textarea>
-                                          </div>
-                              </div>
-                              <div class="post-button-block col-md-12">
-                                  <div class="public">
-                                    <img src="images/Public.svg"/>
-                                    <span class="fa fa-chevron-down"></span>
-                                  </div>
-                                  <div class="add-image-video">
-                                    <span id="add-image">Add Image</span>
-                                    <span id="add-video">Add Video</span>
-                                  </div>
-                                  <div class="cancel-and-share">
-                                    <input type="button" value="Cancel" class="cancel-btn">
-                                    <input type="button" value="Share" class="share-bttn">
-                                  </div>
-                                </div>
-                            </div>
-                        <div class="market-post post-option" id="market-post">
-                          <div class="col-md-12">
-                              <div class="col-md-12 description-block">
-                                  <div>
-                                      <label class="floating-label">Share your ideas, photos and videos etc</label>
-                                      <textarea  rows="5" class="your-ideas" placeholder=""></textarea>
-                                    </div>
-                                    <div>
-                                      <label class="floating-label">Write tags here...</label>
-                                      <textarea class="tags" placeholder=""></textarea>
-                                    </div>
-                              </div>
-                              <div class="col-md-7 dropdown-options location">
-                                  <span class="dropdown-head">Select location</span>
-                                  <p data-toggle="dropdown" class="dropdown-selected">Select location</p>
-                                  <ul class="dropdown-menu">
-                                    <li>General post</li>
-                                    <li>Blog post</li>
-                                    <li>Poll post</li>
-                                  </ul>
-                                </div>
-                                <div class="col-md-5 dropdown-options">
-                                    <span class="dropdown-head">Select category</span>
-                                  <p data-toggle="dropdown" class="dropdown-selected">Select category</p>
-                                  <ul class="dropdown-menu">
-                                    <li>None</li>
-                                    <li>1 day</li>
-                                    <li>1 week</li>
-                                    <li>1 month</li>
-                                    <li>1 year</li>
-                                    <li class="specfic-s">Specific time</li>
-                                  </ul>
-                                </div>
-                                <div class="col-md-5 dropdown-options">
-                                    <span class="dropdown-head">Select post duration</span>
-                                    <p data-toggle="dropdown" class="dropdown-selected">Select post duration</p>
-                                    <ul class="dropdown-menu">
-                                      <li>None</li>
-                                      <li>1 day</li>
-                                      <li>1 week</li>
-                                      <li>1 month</li>
-                                      <li>1 year</li>
-                                      <li class="specfic-s">Specific time</li>
-                                    </ul>
-                                  </div>
-                                  <div class="col-md-3 post-input">
-                                      <label class="floating-label">Write price...</label>
-                                    <input type="text" class="price" placeholder=""/>
-                                    </div>
-                                    <div class="col-md-4 dropdown-options">
-                                        <span class="dropdown-head">Select currency</span>
-                                        <p data-toggle="dropdown" class="dropdown-selected">Select currency</p>
-                                        <ul class="dropdown-menu">
-                                          <li>None</li>
-                                          <li>1 day</li>
-                                          <li>1 week</li>
-                                          <li>1 month</li>
-                                          <li>1 year</li>
-                                          <li class="specfic-s">Specific time</li>
-                                        </ul>
-                                      </div>
-                                      <div class="col-md-12 description-block">
-                                          <label class="floating-label">Write tags here...</label>
-                                          <textarea rows="3" class="tags" placeholder=""></textarea>
-                                      </div>
-                          </div>
-                          <div class="post-button-block col-md-12">
-                              <div class="public">
-                                <img src="images/Public.svg"/>
-                                <span class="fa fa-chevron-down"></span>
-                              </div>
-                              <div class="add-image-video">
-                                <span id="add-image">Add Image</span>
-                                <span id="add-video">Add Video</span>
-                              </div>
-                              <div class="cancel-and-share">
-                                <input type="button" value="Cancel" class="cancel-btn">
-                                <input type="button" value="Share" class="share-bttn">
-                              </div>
-                            </div>
-                        </div>
-                        <div class="add-general-post post-option" id="add-general-post" style="display:block;">
-                          <div class="col-md-12">
-                          <div class="col-md-3 dropdown-options">
-                            <span class="dropdown-head">Select type</span>
-                            <p data-toggle="dropdown" class="dropdown-selected">Select type</p>
-                            <ul class="dropdown-menu">
-                              <li>General post</li>
-                              <li>Blog post</li>
-                              <li>Poll post</li>
-                            </ul>
-                          </div>
-                          <div class="col-md-4 dropdown-options">
-                            <span class="dropdown-head">Select post duration</span>
-                            <p data-toggle="dropdown" class="dropdown-selected">Select post duration</p>
-                            <ul class="dropdown-menu">
-                              <li>None</li>
-                              <li>1 day</li>
-                              <li>1 week</li>
-                              <li>1 month</li>
-                              <li>1 year</li>
-                              <li class="specfic-s">Specific time</li>
-                            </ul>
-                          </div>
-                          <div class="col-md-12 description-block">
-                              <div>
-                                  <label class="floating-label">Share your ideas, photos and videos etc</label>
-                                  <textarea  rows="5" class="your-ideas" placeholder=""></textarea>
-                                </div>
-                                <div>
-                                  <label class="floating-label">Write tags here...</label>
-                                  <textarea class="tags" placeholder=""></textarea>
-                                </div>
-                          </div>
-                        </div>
-                        <div class="post-button-block col-md-12">
-                            <div class="public">
-                              <img src="images/Public.svg"/>
-                              <span class="fa fa-chevron-down"></span>
-                            </div>
-                            <div class="add-image-video">
-                              <span id="add-image">Add Image</span>
-                              <span id="add-video">Add Video</span>
-                            </div>
-                            <div class="cancel-and-share">
-                              <input type="button" value="Cancel" class="cancel-btn">
-                              <input type="button" value="Share" class="share-bttn">
-                            </div>
-                          </div>
-                      </div>
-                        
-                        <div class="col-md-12 filter-list post-option" id="filter-block">
-                          <div class="col-md-3">
-                          <span class="dropdown-head">Select from</span>
-                            <p data-toggle="dropdown" class="dropdown-selected">Select from</p>
-                            <ul class="dropdown-menu">
-                              <li>Anyone</li>
-                              <li>MySelf</li>
-                              <li>My Network</li>
-                              <li>Public</li>
-                              <li data-toggle="modal" data-target="#specificSource" class="specfic-s">Specific source</li>
-                            </ul>
-                          </div>
-                          <div class="col-md-3">
-                              <span class="dropdown-head">Select date</span>
-                            <p data-toggle="dropdown" class="dropdown-selected">Select date</p>
-                            <ul class="dropdown-menu">
-                              <li>Any date</li>
-                              <li>2018</li>
-                              <li>2017</li>
-                              <li>2016</li>
-                              <li data-toggle="modal" data-target="#selectDate" class="specfic-s">Select date</li>
-                            </ul>
-                          </div>
-                          <div class="col-md-3">
-                            <span class="dropdown-head">Select location</span>
-                            <p data-toggle="dropdown" class="dropdown-selected">Select location</p>
-                            <ul class="dropdown-menu">
-                              <li>Anywhere</li>
-                              <li>Near me</li>
-                              <li>Dubai, United Arab Emirates</li>
-                              <li>Karachi, Pakistan</li>
-                              <li class="specfic-s" data-toggle="modal" data-target="#selectLocation">Select a location</li>
-                            </ul>
-                          </div>
-                          <div class="col-md-2 advance-filter">
-                            <span>Advance</span> <span>Filters</span>
-                            <p class="reset">Reset</p>
-                          </div>
-                        </div>
-                      </div>
                     <div class="posts row">
                       <div class="post-block col-md-12 jobs">
                         <div class="post-block-header">
@@ -945,88 +573,95 @@
             </div>
           <div class="profile-block profile-divs" id="profile-main">
             <div class="overview-div overview">
-              <div class="overview-head-div"><p>Overview<i class="fa fa-pencil"></i></p></div>
+              <div class="overview-head-div"><p>Overview</p></div>
               <div class="overview-details-div">
                 <div class="col-md-4">
                   <label>First Name:</label>
-                  <input class="user-inputs" type="text" value="David" readonly>
+                  <p>David</p>
                 </div>
                 <div class="col-md-4">
                   <label>Middle Name:</label>
-                  <input class="user-inputs" type="text" value="-" readonly>
+                  <p>-</p>
                 </div>
                 <div class="col-md-4">
                   <label>Last Name:</label>
-                  <input class="user-inputs" type="text" value="Miller" readonly>
+                  <p>Miller</p>
                 </div>
                 <div class="col-md-4">
                   <label>Date Of Birth:</label>
-                  <input class="user-inputs date" type="text" value="12/25/2018" readonly>
+                  <p>26 June '84</p>
                 </div>
                 <div class="col-md-4">
                   <label>Gender:</label>
-                  <select class="user-inputs dropdown-list appearance" disabled><option value="Male" selected>Male</option><option value="female">Female</option></select>
+                  <p>Male</p>
                 </div>
                 <div class="col-md-4">
                   <label>Marital Status:</label>
-                  <select class="user-inputs dropdown-list appearance" disabled><option value="single">Single</option><option value="married" selected>Married</option></select>
+                  <p>Married</p>
                 </div>
                 <div class="col-md-12">
                   <label>About me</label>
-                  <textarea class="user-inputs" readonly>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam."</textarea>
+                  <p>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                    aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                    justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+                    sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
+                    ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.
+                  </p>
                 </div>
               </div>
             </div>
             <div class="overview-div contact-info">
-                <div class="overview-head-div"><p>Overview<i class="fa fa-pencil"></i></p></div>
+                <div class="overview-head-div"><p>Overview</p></div>
                 <div class="overview-details-div">
                   <div class="col-md-6">
                     <label>Primary Email:</label>
-                    <input class="user-inputs" type="text" value="davidmiller@abc.com" readonly>
+                    <p>davidmiller@abc.com</p>
                   </div>
                   <div class="col-md-6">
                     <label>Secondary Email:</label>
-                    <input class="user-inputs" type="text" value="-" readonly>
+                    <p>-</p>
                   </div>
                   <div class="col-md-6">
                     <label>Contact Number:</label>
-                    <input class="user-inputs" type="text" value="+971 06 530 5373" readonly>
+                    <p>+971 06 530 5373</p>
                   </div>
                   <div class="col-md-6">
                     <label>Work Number:</label>
-                    <input class="user-inputs" type="text" value="-" readonly>
+                    <p>-</p>
                   </div>
                   <div class="col-md-6">
                     <label>Mobile Number:</label>
-                    <input class="user-inputs" type="text" value="+971 56 319 9174" readonly>
+                    <p>+971 56 319 9174</p>
                   </div>
                   <div class="col-md-6">
                     <label>Emergency Number:</label>
-                    <input class="user-inputs" type="text" value="-" readonly>
+                    <p>-</p>
                   </div>
                 
                 </div>
               </div>
               <div class="overview-div education">
-                  <div class="overview-head-div"><p>Education<i class="fa fa-pencil"></i></p></div>
+                  <div class="overview-head-div"><p>Education</p></div>
                   <div class="overview-details-div">
                     <p class="no-results-p">No Education Listed</p>
                   </div>
                 </div>
                 <div class="overview-div experience">
-                    <div class="overview-head-div"><p>Experience<i class="fa fa-pencil"></i></p></div>
+                    <div class="overview-head-div"><p>Experience</p></div>
                     <div class="overview-details-div">
                       <p class="no-results-p">No Experience Listed</p>
                     </div>
                   </div>
                   <div class="overview-div interests">
-                      <div class="overview-head-div"><p>Interests<i class="fa fa-pencil"></i></p></div>
+                      <div class="overview-head-div"><p>Interests</p></div>
                       <div class="overview-details-div">
                        <p class="no-results-p">No Interest Mentioned</p>
                       </div>
                     </div>
                     <div class="overview-div skills">
-                        <div class="overview-head-div"><p>Skills<i class="fa fa-pencil"></i></p></div>
+                        <div class="overview-head-div"><p>Skills</p></div>
                         <div class="overview-details-div">
                             <p class="no-results-p">No Skills Mentioned</p>
                         </div>
@@ -1077,128 +712,12 @@
                     </div>
                     <div class="col-md-6 mark-unavailable">Mark Unavailable</div>
                     <div class="col-md-6">Mark as Sold</div>
-                    </div>
-                    <div class="product-div sold">
-                        <div class="col-md-5"></div>
-                        <div class="col-md-7">
-                          <p class="product-title-p">Product Title</p>
-                          <p class="product-feature-p">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et do...</p>
-                          <p class="product-feature-p"><img class="product-details-close" src="./images/close-icon-black.svg"/>Location will appear here</p>
-                          <p class="product-feature-p"><img class="product-details-close" src="./images/close-icon-black.svg"/>Category will appear here</p>
-                          <p class="product-feature-p"><img class="product-details-close" src="./images/close-icon-black.svg"/>Date will appear here</p>
-                          <p class="product-feature-p"><img class="product-details-close" src="./images/close-icon-black.svg"/>Price will appear here</p>
-                          <p class="product-feature-p"><img class="product-details-close" src="./images/close-icon-black.svg"/>Tags will appear here</p>
-                        </div>
-                        <div class="col-md-6 mark-unavailable">Mark Unavailable</div>
-                        <div class="col-md-6">Mark as Unsold</div>
-                        </div> 
-                        <div class="product-div unavailable">
-                            <div class="col-md-5"></div>
-                            <div class="col-md-7">
-                              <p class="product-title-p">Product Title</p>
-                              <p class="product-feature-p">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et do...</p>
-                              <p class="product-feature-p"><img class="product-details-close" src="./images/close-icon-black.svg"/>Location will appear here</p>
-                              <p class="product-feature-p"><img class="product-details-close" src="./images/close-icon-black.svg"/>Category will appear here</p>
-                              <p class="product-feature-p"><img class="product-details-close" src="./images/close-icon-black.svg"/>Date will appear here</p>
-                              <p class="product-feature-p"><img class="product-details-close" src="./images/close-icon-black.svg"/>Price will appear here</p>
-                              <p class="product-feature-p"><img class="product-details-close" src="./images/close-icon-black.svg"/>Tags will appear here</p>
-                            </div>
-                            <div class="col-md-6 mark-unavailable">Mark available</div>
-                            <div class="col-md-6">Mark as sold</div>
-                            </div>  
+                    </div>  
           </div>
           <div class="network-block profile-divs" id="profile-network">
-              <div class=" friend-request-block">
-                  <div class="main-block col-md-12">
-                    <div class="head-block">
-                      <span>New Network requests (3)</span> <p>Reject All</p><p>Accept All</p>
-
-                    </div>
-                    <div class="main-body">
-                      <div class="request-user row">
-                        <div class="user-post-profile-img">
-                          <img src="images/Rectangle 65.png" />
-                        </div>
-                        <div class="user-detail">
-                          <span class="user-name">Gail Murray</span> <p class="designation-p">Designation</p>
-                          <p class="network-desc">
-                              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam.
-                          </p>
-                        </div>
-                        <div class="btn-options">
-                          <span class="hand-shake">
-                            <img src="images/handshake.png" />
-                          </span>
-                          <span class="cancel-request">
-                            <span class="fa arrow"></span>
-                          </span>
-                        </div>
-                      </div>
-                      <div class="request-user row">
-                        <div class="user-post-profile-img">
-                          <img src="images/Rectangle 65.png" />
-                        </div>
-                        <div class="user-detail">
-                          <span class="user-name">Gail Murray</span> <p class="designation-p">Designation</p>
-                          <p class="network-desc">
-                              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam.
-                          </p>
-                        </div>
-                        <div class="btn-options">
-                          <span class="hand-shake">
-                            <img src="images/handshake.png" />
-                          </span>
-                          <span class="cancel-request">
-                            <span class="fa arrow"></span>
-                          </span>
-                        </div>
-                      </div>
-                      <div class="request-user row">
-                        <div class="user-post-profile-img">
-                          <img src="images/Rectangle 65.png" />
-                        </div>
-                        <div class="user-detail">
-                          <span class="user-name">Gail Murray</span> <p class="designation-p">Designation</p>
-                          <p class="network-desc">
-                              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam.
-                          </p>
-                        </div>
-                        <div class="btn-options">
-                          <span class="hand-shake">
-                            <img src="images/handshake.png" />
-                          </span>
-                          <span class="cancel-request">
-                            <span class="fa arrow"></span>
-                          </span>
-                        </div>
-                      </div>
-                      <div class="request-user row">
-                        <div class="user-post-profile-img">
-                          <img src="images/Rectangle 65.png" />
-                        </div>
-                        <div class="user-detail">
-                          <span class="user-name">Gail Murray</span> <p class="designation-p">Designation</p>
-                          <p class="network-desc">
-                              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam.
-                          </p>
-                        </div>
-                        <div class="btn-options">
-                          <span class="hand-shake">
-                            <img src="images/handshake.png" />
-                          </span>
-                          <span class="cancel-request">
-                            <span class="fa arrow"></span>
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    
-                  </div>
-                </div>
                 <div class="my-networks-div">
                   <div class="my-network-head">
                   <p>My Networks (21)</p>
-                  <a role="button"><img class="product-details-close" src="./images/close-icon-black.svg"/>Create Group</a>
                   <div id="sub-category">
                       <img class="header-msg-img" src="./images/Sort.svg" />
                     </div>  
@@ -1231,9 +750,8 @@
                 <p class="product-feature-p"><img class="product-details-close" src="./images/close-icon-black.svg"/>Tags will appear here</p>
               </div>
               <div class="col-md-12">
-                  <div class="col-md-4 event-buttons">Tentative</div>
-                  <div class="col-md-4 event-buttons">Not Attending</div>
-                  <div class="col-md-4 event-buttons">Accept</div>
+                  <div class="col-md-6 event-buttons">Tentative</div>
+                  <div class="col-md-6 event-buttons not-attending">Not Attending</div>
                   </div>
               </div>  
             </div>
@@ -1253,9 +771,8 @@
                     <p class="product-feature-p"><img class="product-details-close" src="./images/close-icon-black.svg"/>Tags will appear here</p>
                   </div> 
                   <div class="col-md-12">
-                  <div class="col-md-4 event-buttons">Tentative</div>
-                  <div class="col-md-4 event-buttons">Not Attending</div>
-                  <div class="col-md-4 event-buttons">Accept</div>
+                  <div class="col-md-6 event-buttons">Tentative</div>
+                  <div class="col-md-6 event-buttons not-attending">Not Attending</div>
                   </div>
                   </div>  
                   <div class="product-div event-div">
@@ -1270,9 +787,8 @@
                         <p class="product-feature-p"><img class="product-details-close" src="./images/close-icon-black.svg"/>Tags will appear here</p>
                       </div>
                       <div class="col-md-12">
-                          <div class="col-md-4 event-buttons">Tentative</div>
-                          <div class="col-md-4 event-buttons">Not Attending</div>
-                          <div class="col-md-4 event-buttons">Accept</div>
+                          <div class="col-md-6 event-buttons">Tentative</div>
+                          <div class="col-md-6 event-buttons not-attending">Not Attending</div>
                           </div>
                       </div>  
             </div>
@@ -1419,9 +935,8 @@
                                 <p class="product-feature-p"><img class="product-details-close" src="./images/close-icon-black.svg"/>Tags will appear here</p>
                               </div> 
                               <div class="col-md-12">
-                              <div class="col-md-4 event-buttons">Tentative</div>
-                              <div class="col-md-4 event-buttons">Not Attending</div>
-                              <div class="col-md-4 event-buttons">Accept</div>
+                              <div class="col-md-6 event-buttons">Tentative</div>
+                              <div class="col-md-6 event-buttons not-attending">Not Attending</div>
                               </div>
                               </div>  
                     </div>
@@ -1835,96 +1350,6 @@
         </div>
       </div>
     </div>
-    <div id="specificSource" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-      
-          <!-- Modal content-->
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Specific Source</h4>
-            </div>
-            <div class="modal-body">
-                <label class="floating-label">Write source name here..</label>
-                <input type="text" id="searchSourceList" title="Type in a name" class="model-input">
-                <ul id="SourceListDopdown">
-                    <li><a href="#"><img src="images/Rectangle 102.png"/><span>Adele Johnson</span></a></li>
-                    <li><a href="#"><img src="images/Rectangle 102.png"/><span>Agnes Roll</span></a></li>
-                  
-                    <li><a href="#"><img src="images/Rectangle 102.png"/><span>Billy Mack</span></a></li>
-                    <li><a href="#"><img src="images/Rectangle 102.png"/><span>Bob Dude</span></a></li>
-                  
-                    <li><a href="#"><img src="images/Rectangle 102.png"/><span>Calvin Owen</span></a></li>
-                    <li><a href="#"><img src="images/Rectangle 102.png"/><span>Christina Ma</span></a></li>
-                    <li><a href="#"><img src="images/Rectangle 102.png"/><span>Cindy Lee</span></a></li>
-                  </ul>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default confirm-source" value="source">Confirm</button>
-            </div>
-          </div>
-      
-        </div>
-      </div>
-      <div id="selectDate" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-      
-          <!-- Modal content-->
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Select Date</h4>
-            </div>
-            <div class="modal-body">
-                <label class="floating-label">Write date here..</label>
-              <input type="text" id="datepicker" class="model-input">
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default confirm-source">Confirm</button>
-            </div>
-          </div>
-      
-        </div>
-      </div>
-      <div id="selectLocation" class="modal fade" role="dialog">
-          <div class="modal-dialog">
-        
-            <!-- Modal content-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Select Location</h4>
-              </div>
-              <div class="modal-body">
-                <div class="col-md-12 radio-bttns">
-                  <div class="col-md-6">
-                    <input type="radio" name="gender" value="male" checked="checked"> <span>By name</span>
-                  </div>
-                  <div class="col-md-6">
-                    <input type="radio" name="gender" value="female"><span>Location on map</span>
-                  </div>
-                </div>
-                <div class="location-block">
-                  <label class="floating-label">Write location name here..</label>
-                  <input type="text" id="locationName" class="model-input">
-                  <ul id="locationLists">
-                      <li><a href="#">Karachi</a></li>
-                      <li><a href="#">Dubai</a></li>
-                      <li><a href="#">Islamabad</a></li>
-                      <li><a href="#">Lahore</a></li>
-                      <li><a href="#">New York</a></li>
-                      <li><a href="#">Delhi</a></li>
-                      <li><a href="#">Mumbai</a></li>
-                    </ul>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default confirm-source">Confirm</button>
-              </div>
-            </div>
-        
-          </div>
-        </div>
     <script src="scripts/custom.js"></script>
     <script src="scripts/popup.js"></script>
     <script>
@@ -2120,38 +1545,9 @@
           $(".profile-divs").hide();
           $("#profile-activity").show();
         });
-        $(".fa-pencil").click(function(){
-          $(this).parent().parent().siblings().find('.user-inputs').each(function(){
-              $(this).removeAttr("readonly");
-              $(this).addClass("editable");
-              if($(this).hasClass("dropdown-list")){
-                 $(this).removeClass("appearance");
-                 $(this).removeAttr("disabled");
-              }
-              if($(this).hasClass("date")){
-                $(this).datepicker('enable');
-              }
-
-          });
-        });
-        $(".user-inputs").focusout(function(){
-          $(this).removeClass("editable");
-          $(this).attr("readonly","readonly");
-          if($(this).hasClass("dropdown-list")){
-                 $(this).addClass("appearance");
-                 $(this).prop("disabled", "disabled");
-          }
-          if($(this).hasClass("date")){
-            $(this).datepicker('disable');
-          }
-        });
-        
-
       });
       $(document).ready(function(){
         $( "#datepicker" ).datepicker();
-        $(".date").datepicker();
-        $(".date").datepicker("disable");
       });
     </script>
   </body>

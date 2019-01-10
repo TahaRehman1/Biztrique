@@ -8,25 +8,31 @@
     <link rel="stylesheet" href="./style/bootstrap.min.css" />
     <link rel="stylesheet" href="./style/styles.css" />
     <link rel="stylesheet" href="./style/video-js.css" />
+    <link rel="stylesheet" href="./style/jquery-ui.css"/>
     <link
       href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
       rel="stylesheet"
     />
     <script src="./scripts/jquery.min.js"></script>
+    <script src="./scripts/jquery-ui.js"></script>
     <script src="./scripts/bootstrap.min.js"></script>
     <script src="./scripts/video.js"></script>
+    <script src="./scripts/jquery.ddslick.min.js"></script>
+    
   </head>
   <body>
     <div class="header-div">
       <div class="container">
         <a href="index.html"><img class="logo-img" src="./images/BiztriqueLogo.svg" /></a>
         <div class="search-main">
-        <input placeholder="Search" class="search-box" type="text" />
+        <label class="floating-label">Search</label> 
+        <input placeholder="" class="search-box" type="text" />
         <img src="images/search.svg" class="search-image"/>
         </div>
         <ul class="header-links">
           <li class="selected"><a href="./index.html">Home</a></li>
-          <li><a href="./Market.html">Market</a></li>
+          <li class="market-header"><a href="./Market.html">Market</a></li>
+          <li class="classified-header"><a href="./Market.html">Classifieds</a></li>
           <li><a href="./Events.html">Events</a></li>
           <li><a href="./Jobs.html">Jobs</a></li>
         </ul>
@@ -72,7 +78,7 @@
           <div class="head-block">
             <span>Primary Filters</span>
           </div>
-          <ul class="navbar-list">
+          <ul class="navbar-list primary-filters">
             <li class="selected" value="all">All Activity</li>
             <li value="general">General Posts</li>
             <li value="market">Market Posts</li>
@@ -102,27 +108,38 @@
       </div>
       <div class="col-md-5 post-list">
         <div class="post-categories  row">
-          <div id="general-post" class="category" data-target="#add-general-post">
+          <div class="col-md-12 selected-user-post">
+            <img src="images/Rectangle 102.png"><span class="user-name">Adele Johnson</span>
+            <span class="fa arrow"></span>
+          </div>
+          <div id="general-post" class="category show" data-target="#add-general-post">
             <span class="fa arrow"></span>General Post
           </div>
           <div id="market" class="category" data-target="#market-post"><span class="fa arrow"></span>Market</div>
           <div id="event" class="category" data-target="#event-post"><span class="fa arrow"></span>Event</div>
           <div id="jobs" class="category" data-target="#job-post"><span class="fa arrow"></span>Jobs</div>
-          <div id="sub-category" class="category" data-target="#filter-block">
+          <div id="sub-category" class="">
             <img class="header-msg-img" src="./images/Sort.svg" />
             <img
-              class="header-msg-img"
+              class="header-msg-img filter-img"
               src="./images/Filter.svg"
               id="filter-image"
-            />
+              data-target="#filter-block"/>
           </div>
           <div class="event-post post-option" id="event-post">
               <div class="col-md-12">
                   <div class="col-md-12 description-block">
-                      <textarea  rows="2" class="your-ideas" placeholder="Write post titile..."></textarea>
-                      <textarea rows="3" class="tags" placeholder="Write post description here..."></textarea>
+                      <div>
+                          <label class="floating-label">Share your ideas, photos and videos etc</label>
+                          <textarea  rows="5" class="your-ideas" placeholder=""></textarea>
+                        </div>
+                        <div>
+                          <label class="floating-label">Write tags here...</label>
+                          <textarea class="tags" placeholder=""></textarea>
+                        </div>
                   </div>
                   <div class="col-md-7 dropdown-options location">
+                      <span class="dropdown-head">Select location</span>
                       <p data-toggle="dropdown" class="dropdown-selected">Select location</p>
                       <ul class="dropdown-menu">
                         <li>General post</li>
@@ -131,6 +148,7 @@
                       </ul>
                     </div>
                     <div class="col-md-5 dropdown-options">
+                        <span class="dropdown-head">Select category</span>
                       <p data-toggle="dropdown" class="dropdown-selected">Select category</p>
                       <ul class="dropdown-menu">
                         <li>None</li>
@@ -138,10 +156,11 @@
                         <li>1 week</li>
                         <li>1 month</li>
                         <li>1 year</li>
-                        <li>Specific time</li>
+                        <li class="specfic-s">Specific time</li>
                       </ul>
                     </div>
                     <div class="col-md-5 dropdown-options">
+                        <span class="dropdown-head">Select post duration</span>
                         <p data-toggle="dropdown" class="dropdown-selected">Select post duration</p>
                         <ul class="dropdown-menu">
                           <li>None</li>
@@ -149,13 +168,15 @@
                           <li>1 week</li>
                           <li>1 month</li>
                           <li>1 year</li>
-                          <li>Specific time</li>
+                          <li class="specfic-s">Specific time</li>
                         </ul>
                       </div>
                         <div class="col-md-3 post-input">
-                            <input type="text" placeholder="Write fee..." class="fee"/>
+                            <label class="floating-label">Write fee...</label> 
+                            <input type="text" placeholder="" class="fee"/>
                             </div>
                         <div class="col-md-4 dropdown-options">
+                            <span class="dropdown-head">Select currency</span>
                             <p data-toggle="dropdown" class="dropdown-selected">Select currency</p>
                             <ul class="dropdown-menu">
                               <li>None</li>
@@ -163,11 +184,12 @@
                               <li>1 week</li>
                               <li>1 month</li>
                               <li>1 year</li>
-                              <li>Specific time</li>
+                              <li class="specfic-s">Specific time</li>
                             </ul>
                           </div>
                           <div class="col-md-12 description-block">
-                              <textarea rows="3" class="tags" placeholder="Write tags here..."></textarea>
+                              <label class="floating-label">Write tags here...</label> 
+                              <textarea rows="3" class="tags" placeholder=""></textarea>
                           </div>
               </div>
               <div class="post-button-block col-md-12">
@@ -188,10 +210,18 @@
             <div class="job-post post-option" id="job-post">
                 <div class="col-md-12">
                     <div class="col-md-12 description-block">
-                        <textarea  rows="2" class="your-ideas" placeholder="Write post titile..."></textarea>
-                        <textarea rows="3" class="tags" placeholder="Write post description here..."></textarea>
-                        <input type="text" class="company-name" placeholder="Write comapny name here..."/>
+                        <div>
+                            <label class="floating-label">Share your ideas, photos and videos etc</label>
+                            <textarea  rows="5" class="your-ideas" placeholder=""></textarea>
+                          </div>
+                          <div>
+                            <label class="floating-label">Write tags here...</label>
+                            <textarea class="tags" placeholder=""></textarea>
+                          </div>
+                        <label class="floating-label">Write comapny name here...</label> 
+                        <input type="text" class="company-name" placeholder=""/>
                         <div class="col-md-4 dropdown-options">
+                            <span class="dropdown-head">Select job type</span>
                             <p data-toggle="dropdown" class="dropdown-selected">Select job type</p>
                             <ul class="dropdown-menu">
                               <li>Freelancer</li>
@@ -200,14 +230,16 @@
                               <li>Full time</li>
                               <li>Part time</li>
                               <li>Consultancy</li>
-                              <li>Other</li>
+                              <li class="specfic-s">Other</li>
                             </ul>
                           </div>
                     </div>
                     <div class="col-md-3 post-input">
-                        <input type="text" placeholder="Write salary..." class="salary"/>
+                        <label class="floating-label">Write salary...</label> 
+                        <input type="text" placeholder="" class="salary"/>
                         </div>
                     <div class="col-md-4 dropdown-options">
+                        <span class="dropdown-head">Select term</span>
                         <p data-toggle="dropdown" class="dropdown-selected">Select term</p>
                         <ul class="dropdown-menu">
                           <li>Non-diclosed</li>
@@ -215,10 +247,11 @@
                           <li>Weekly</li>
                           <li>Monthly</li>
                           <li>Yearly</li>
-                          <li>Others</li>
+                          <li class="specfic-s">Others</li>
                         </ul>
                       </div>
                       <div class="col-md-5 dropdown-options">
+                          <span class="dropdown-head">Select category</span>
                         <p data-toggle="dropdown" class="dropdown-selected">Select category</p>
                         <ul class="dropdown-menu">
                           <li>None</li>
@@ -226,10 +259,11 @@
                           <li>1 week</li>
                           <li>1 month</li>
                           <li>1 year</li>
-                          <li>Specific time</li>
+                          <li class="specfic-s">Specific time</li>
                         </ul>
                       </div>
                       <div class="col-md-7 dropdown-options">
+                          <span class="dropdown-head">Select location</span>
                           <p data-toggle="dropdown" class="dropdown-selected">Select location</p>
                           <ul class="dropdown-menu">
                             <li>None</li>
@@ -237,11 +271,12 @@
                             <li>1 week</li>
                             <li>1 month</li>
                             <li>1 year</li>
-                            <li>Specific time</li>
+                            <li class="specfic-s">Specific time</li>
                           </ul>
                         </div>
                         
                           <div class="col-md-5 dropdown-options">
+                              <span class="dropdown-head">Select post duration</span>
                               <p data-toggle="dropdown" class="dropdown-selected">Select post duration</p>
                               <ul class="dropdown-menu">
                                 <li>None</li>
@@ -249,11 +284,12 @@
                                 <li>1 week</li>
                                 <li>1 month</li>
                                 <li>1 year</li>
-                                <li>Specific time</li>
+                                <li class="specfic-s">Specific time</li>
                               </ul>
                             </div>
                             <div class="col-md-12 description-block">
-                                <textarea rows="3" class="tags" placeholder="Write tags here..."></textarea>
+                                <label class="floating-label">Write tags here...</label> 
+                                <textarea rows="3" class="tags" placeholder=""></textarea>
                             </div>
                 </div>
                 <div class="post-button-block col-md-12">
@@ -274,10 +310,17 @@
           <div class="market-post post-option" id="market-post">
             <div class="col-md-12">
                 <div class="col-md-12 description-block">
-                    <textarea  rows="2" class="your-ideas" placeholder="Write post titile..."></textarea>
-                    <textarea rows="3" class="tags" placeholder="Write post description here..."></textarea>
+                    <div>
+                        <label class="floating-label">Share your ideas, photos and videos etc</label>
+                        <textarea  rows="5" class="your-ideas" placeholder=""></textarea>
+                      </div>
+                      <div>
+                        <label class="floating-label">Write tags here...</label>
+                        <textarea class="tags" placeholder=""></textarea>
+                      </div>
                 </div>
                 <div class="col-md-7 dropdown-options location">
+                    <span class="dropdown-head">Select location</span>
                     <p data-toggle="dropdown" class="dropdown-selected">Select location</p>
                     <ul class="dropdown-menu">
                       <li>General post</li>
@@ -286,6 +329,7 @@
                     </ul>
                   </div>
                   <div class="col-md-5 dropdown-options">
+                      <span class="dropdown-head">Select category</span>
                     <p data-toggle="dropdown" class="dropdown-selected">Select category</p>
                     <ul class="dropdown-menu">
                       <li>None</li>
@@ -293,10 +337,11 @@
                       <li>1 week</li>
                       <li>1 month</li>
                       <li>1 year</li>
-                      <li>Specific time</li>
+                      <li class="specfic-s">Specific time</li>
                     </ul>
                   </div>
                   <div class="col-md-5 dropdown-options">
+                      <span class="dropdown-head">Select post duration</span>
                       <p data-toggle="dropdown" class="dropdown-selected">Select post duration</p>
                       <ul class="dropdown-menu">
                         <li>None</li>
@@ -304,13 +349,15 @@
                         <li>1 week</li>
                         <li>1 month</li>
                         <li>1 year</li>
-                        <li>Specific time</li>
+                        <li class="specfic-s">Specific time</li>
                       </ul>
                     </div>
                     <div class="col-md-3 post-input">
-                      <input type="text" class="price" placeholder="Write price..."/>
+                        <label class="floating-label">Write price...</label>
+                      <input type="text" class="price" placeholder=""/>
                       </div>
                       <div class="col-md-4 dropdown-options">
+                          <span class="dropdown-head">Select currency</span>
                           <p data-toggle="dropdown" class="dropdown-selected">Select currency</p>
                           <ul class="dropdown-menu">
                             <li>None</li>
@@ -318,11 +365,12 @@
                             <li>1 week</li>
                             <li>1 month</li>
                             <li>1 year</li>
-                            <li>Specific time</li>
+                            <li class="specfic-s">Specific time</li>
                           </ul>
                         </div>
                         <div class="col-md-12 description-block">
-                            <textarea rows="3" class="tags" placeholder="Write tags here..."></textarea>
+                            <label class="floating-label">Write tags here...</label>
+                            <textarea rows="3" class="tags" placeholder=""></textarea>
                         </div>
             </div>
             <div class="post-button-block col-md-12">
@@ -340,10 +388,11 @@
                 </div>
               </div>
           </div>
-          <div class="add-general-post post-option" id="add-general-post">
+          <div class="add-general-post post-option" id="add-general-post" style="display:block;">
             <div class="col-md-12">
             <div class="col-md-3 dropdown-options">
-              <p data-toggle="dropdown" class="dropdown-selected">Select</p>
+              <span class="dropdown-head">Select type</span>
+              <p data-toggle="dropdown" class="dropdown-selected">Select type</p>
               <ul class="dropdown-menu">
                 <li>General post</li>
                 <li>Blog post</li>
@@ -351,6 +400,7 @@
               </ul>
             </div>
             <div class="col-md-4 dropdown-options">
+              <span class="dropdown-head">Select post duration</span>
               <p data-toggle="dropdown" class="dropdown-selected">Select post duration</p>
               <ul class="dropdown-menu">
                 <li>None</li>
@@ -358,12 +408,18 @@
                 <li>1 week</li>
                 <li>1 month</li>
                 <li>1 year</li>
-                <li>Specific time</li>
+                <li class="specfic-s">Specific time</li>
               </ul>
             </div>
             <div class="col-md-12 description-block">
-                <textarea  rows="5" class="your-ideas" placeholder="Share your ideas, photos and videos etc"></textarea>
-                <textarea class="tags" placeholder="Write tags here"></textarea>
+              <div>
+                <label class="floating-label">Share your ideas, photos and videos etc</label>
+                <textarea  rows="5" class="your-ideas" placeholder=""></textarea>
+              </div>
+              <div>
+                <label class="floating-label">Write tags here...</label>
+                <textarea class="tags" placeholder=""></textarea>
+              </div>
             </div>
           </div>
           <div class="post-button-block col-md-12">
@@ -384,45 +440,59 @@
           
           <div class="col-md-12 filter-list post-option" id="filter-block">
             <div class="col-md-3">
-              <span>Select from</span>
-              <p data-toggle="dropdown" class="dropdown-selected">Anyone</p>
+            <span class="dropdown-head">Select from</span>
+              <p data-toggle="dropdown" class="dropdown-selected">Select from</p>
               <ul class="dropdown-menu">
-                <li class="selected">Anyone</li>
+                <li>Anyone</li>
                 <li>MySelf</li>
                 <li>My Network</li>
                 <li>Public</li>
-                <li>Specific source</li>
+                <li data-toggle="modal" data-target="#specificSource" class="specfic-s">Specific source</li>
               </ul>
             </div>
             <div class="col-md-3">
-              <span>Select date</span>
-              <p data-toggle="dropdown" class="dropdown-selected">Any date</p>
+                <span class="dropdown-head">Select date</span>
+              <p data-toggle="dropdown" class="dropdown-selected">Select date</p>
               <ul class="dropdown-menu">
-                <li class="selected">Any date</li>
+                <li>Any date</li>
                 <li>2018</li>
                 <li>2017</li>
                 <li>2016</li>
-                <li>Select date</li>
+                <li data-toggle="modal" data-target="#selectDate" class="specfic-s">Select date</li>
               </ul>
             </div>
             <div class="col-md-3">
-              <span>Select location</span>
-              <p data-toggle="dropdown" class="dropdown-selected">Anywhere</p>
+              <span class="dropdown-head">Select location</span>
+              <p data-toggle="dropdown" class="dropdown-selected">Select location</p>
               <ul class="dropdown-menu">
-                <li class="selected">Anywhere</li>
+                <li>Anywhere</li>
                 <li>Near me</li>
                 <li>Dubai, United Arab Emirates</li>
                 <li>Karachi, Pakistan</li>
-                <li>Select a location</li>
+                <li class="specfic-s" data-toggle="modal" data-target="#selectLocation">Select a location</li>
               </ul>
             </div>
             <div class="col-md-2 advance-filter">
               <span>Advance</span> <span>Filters</span>
+              <p class="reset">Reset</p>
             </div>
           </div>
         </div>
         <div class="posts row">
-          <div class="post-block col-md-12 jobs">
+            <div class="post-block col-md-12 empty-block">
+                <div class="post-block-header">
+                  <span class="post-option-btn">
+                  </span>
+                </div>
+                <div class="post-body col-md-12 ">
+                    <p>No post to show</p>
+                  <button class="btn-empty" id="try-other" data-toggle="modal" data-target="#specificSource">Try other source</button>
+                </div>
+                <div class="post-variation col-md-12">
+                    <button class="btn-empty reset" id="post-variation">View post variations</button>
+                </div>
+              </div>
+          <div class="post-block col-md-12 general">
             <div class="post-block-header">
               <div class="col-md-8">
                 <div class="user-post-profile-img">
@@ -457,7 +527,7 @@
                 <img src="images/like.svg" /><span>Like</span>
               </div>
               <div class="col-md-4 comment-btn">
-                <img src="images/chat.svg" /><span>Comment</span>
+                <img src="images/comment.svg" /><span>Comment</span>
               </div>
               <div class="col-md-4 share-btn">
                 <img src="images/share.svg" /><span></span><span>Share</span>
@@ -509,7 +579,7 @@
                 <img src="images/like.svg" /><span>Like</span>
               </div>
               <div class="col-md-4 comment-btn">
-                <img src="images/chat.svg" /><span>Comment</span>
+                <img src="images/comment.svg" /><span>Comment</span>
               </div>
               <div class="col-md-4 share-btn">
                 <img src="images/share.svg" /><span></span><span>Share</span>
@@ -561,13 +631,67 @@
                   <img src="images/like.svg" /><span>Like</span>
                 </div>
                 <div class="col-md-4 comment-btn">
-                  <img src="images/chat.svg" /><span>Comment</span>
+                  <img src="images/comment.svg" /><span>Comment</span>
                 </div>
                 <div class="col-md-4 share-btn">
                   <img src="images/share.svg" /><span></span><span>Share</span>
                 </div>
               </div>
             </div>
+            <div class="post-block col-md-12 jobs">
+                <div class="post-block-header">
+                  <div class="col-md-8">
+                    <div class="user-post-profile-img">
+                      <img src="images/Rectangle 65.png" />
+                    </div>
+                    <div class="post-detail">
+                      <p>
+                        <span class="user-name">Name</span>
+                        <span>posted a job opening</span>
+                      </p>
+                      <span class="designation">Designation-Film</span>
+                      <p>
+                        <img src="images/Public.svg" class="public-post-img" />
+                        <span> Time Posted </span>
+                      </p>
+                    </div>
+                  </div>
+                  <span class="post-option-btn"
+                    ><img src="images/Options.svg"
+                  /></span>
+                </div>
+                <div class="post-body col-md-12  post-multiple-images">
+                  <div class="main-block">
+                    <div class="image-block col-md-12">
+                      <img class="job-poster" src="images/office-poster.jpg" />
+                    </div>
+                  </div>
+                  <div class="post-body-detail">
+                    <div class="col-md-6 event-desc-div job-desc-div">
+                    <p class="event-title">Job Title</p>
+                    <p class="product-feature-p"><img class="product-details-close" src="./images/close-icon-black.svg"/>Company name will appear here (if shown)</p>
+                            <p class="product-feature-p"><img class="product-details-close" src="./images/close-icon-black.svg"/>Location will appear here</p>
+                            <p class="product-feature-p"><img class="product-details-close" src="./images/close-icon-black.svg"/>Category will appear here</p>
+                            <p class="product-feature-p"><img class="product-details-close" src="./images/close-icon-black.svg"/>Salary will appear here (if shown)</p>
+                            <p class="product-feature-p"><img class="product-details-close" src="./images/close-icon-black.svg"/>Tags will appear here</p> 
+                          </div>
+                    <div class="col-md-6 event-features-div">
+                        <p class="job-short-desc">Event description will appear here... Lorem i ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumysum dolor sit ame sum tempor... <a class="read-more-link">Read more</a></p>       
+                    </div>
+                  </div>
+                </div>
+                <div class="comment-and-like-block">
+                  <div class="col-md-4 like-btn">
+                    <img src="images/like.svg" /><span>Like</span>
+                  </div>
+                  <div class="col-md-4 comment-btn">
+                    <img src="images/comment.svg" /><span>Comment</span>
+                  </div>
+                  <div class="col-md-4 share-btn">
+                    <img src="images/share.svg" /><span></span><span>Share</span>
+                  </div>
+                </div>
+              </div>
           <div class="post-block col-md-12 event">
             <div class="post-block-header">
               <div class="col-md-8">
@@ -620,14 +744,14 @@
                 <img src="images/like.svg" /><span>Like</span>
               </div>
               <div class="col-md-4 comment-btn">
-                <img src="images/chat.svg" /><span>Comment</span>
+                <img src="images/comment.svg" /><span>Comment</span>
               </div>
               <div class="col-md-4 share-btn">
                 <img src="images/share.svg" /><span></span><span>Share</span>
               </div>
             </div>
           </div>
-          <div class="post-block col-md-12 jobs">
+          <div class="post-block col-md-12 market">
             <div class="post-block-header">
               <div class="col-md-8">
                 <div class="user-post-profile-img">
@@ -663,7 +787,7 @@
                 <img src="images/like.svg" /><span>Like</span>
               </div>
               <div class="col-md-4 comment-btn">
-                <img src="images/chat.svg" /><span>Comment</span>
+                <img src="images/comment.svg" /><span>Comment</span>
               </div>
               <div class="col-md-4 share-btn">
                 <img src="images/share.svg" /><span></span><span>Share</span>
@@ -724,7 +848,7 @@
                 <img src="images/like.svg" /><span>Like</span>
               </div>
               <div class="col-md-4 comment-btn">
-                <img src="images/chat.svg" /><span>Comment</span>
+                <img src="images/comment.svg" /><span>Comment</span>
               </div>
               <div class="col-md-4 share-btn">
                 <img src="images/share.svg" /><span></span><span>Share</span>
@@ -779,7 +903,7 @@
                   <img src="images/like.svg" /><span>Like</span>
                 </div>
                 <div class="col-md-4 comment-btn">
-                  <img src="images/chat.svg" /><span>Comment</span>
+                  <img src="images/comment.svg" /><span>Comment</span>
                 </div>
                 <div class="col-md-4 share-btn">
                   <img src="images/share.svg" /><span></span><span>Share</span>
@@ -1173,88 +1297,106 @@
         </div>
       </div>
     </div>
-    <script>
-      $(document).ready(function() {
-        moveScroller();
-        $(".category").click(function(){
-          var dataTarget = $(this).attr("data-target");
-          $(this).siblings(".category").each(function(){
-            var a = $(this).attr("data-target");
-            $(a).slideUp();
-          });
-          $(dataTarget).slideToggle();
-        });
-        $(".navbar-list li").click(function(){
-          var value = $(this).attr("value");
-          if(value!="all"){
-          $(this).siblings("li").removeClass("selected");
-          $(this).addClass("selected");
-          $(".post-block").css({"display":"none"});
-          $("."+value).css({"display":"block"});
-          }
-          else{
-            $(this).siblings("li").removeClass("selected");
-          $(this).addClass("selected");
-            $(".post-block").css({"display":"block"});
-          }
-
-        });
-        $(".post-option ul li").click(function() {
-          $(this)
-            .siblings()
-            .removeClass("selected");
-          $(this).addClass("selected");
-          $(this)
-            .parent()
-            .siblings(".dropdown-selected")
-            .html("");
-          var value = $(this).html();
-          $(this)
-            .parent()
-            .siblings(".dropdown-selected")
-            .append(value);
-        });
-        $(".post-categories .category").click(function(){
-          if($(this).hasClass("show")){
-            $(this).removeClass("show");
-          }
-          else{
-            $(this).siblings(".category").removeClass("show");
-            $(this).addClass("show");
-          }
-        });
-        $(".contacts li").click(function(){
-          var name = $(this).find("#name").html();
-          var id = name.replace(" ","");
-          register_popup(id,name);
-        });
-        function moveScroller() {
-    var $anchor = $("#scroller-anchor");
-    var $scroller = $('.popular-across-biztrique');
-
-    var move = function() {
-        var st = $(window).scrollTop();
-        var ot = $anchor.offset().top;
-        if(st > ot) {
-            $scroller.css({
-                position: "fixed",
-                top: "0px",
-                width: "263px"
-            });
-        } else {
-            $scroller.css({
-                position: "relative",
-                top: "",
-                width: "auto"
-            });
-        }
-    };
-    $(window).scroll(move);
-    move();
-}
+    <div id="specificSource" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+      
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Specific Source</h4>
+            </div>
+            <div class="modal-body">
+                <label class="floating-label">Write source name here..</label>
+                <input type="text" id="searchSourceList" title="Type in a name" class="model-input">
+                <ul id="SourceListDopdown">
+                    <li><a href="#"><img src="images/Rectangle 102.png"/><span>Adele Johnson</span></a></li>
+                    <li><a href="#"><img src="images/Rectangle 102.png"/><span>Agnes Roll</span></a></li>
+                  
+                    <li><a href="#"><img src="images/Rectangle 102.png"/><span>Billy Mack</span></a></li>
+                    <li><a href="#"><img src="images/Rectangle 102.png"/><span>Bob Dude</span></a></li>
+                  
+                    <li><a href="#"><img src="images/Rectangle 102.png"/><span>Calvin Owen</span></a></li>
+                    <li><a href="#"><img src="images/Rectangle 102.png"/><span>Christina Ma</span></a></li>
+                    <li><a href="#"><img src="images/Rectangle 102.png"/><span>Cindy Lee</span></a></li>
+                  </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default confirm-source" value="source">Confirm</button>
+            </div>
+          </div>
+      
+        </div>
+      </div>
+      <div id="selectDate" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+      
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Select Date</h4>
+            </div>
+            <div class="modal-body">
+                <label class="floating-label">Write date here..</label>
+              <input type="text" id="datepicker" class="model-input">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default confirm-source">Confirm</button>
+            </div>
+          </div>
+      
+        </div>
+      </div>
+      <div id="selectLocation" class="modal fade" role="dialog">
+          <div class="modal-dialog">
         
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Select Location</h4>
+              </div>
+              <div class="modal-body">
+                <div class="col-md-12 radio-bttns">
+                  <div class="col-md-6">
+                    <input type="radio" name="gender" value="male" checked="checked"> <span>By name</span>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="radio" name="gender" value="female"><span>Location on map</span>
+                  </div>
+                </div>
+                <div class="location-block">
+                  <label class="floating-label">Write location name here..</label>
+                  <input type="text" id="locationName" class="model-input">
+                  <ul id="locationLists">
+                      <li><a href="#">Karachi</a></li>
+                      <li><a href="#">Dubai</a></li>
+                      <li><a href="#">Islamabad</a></li>
+                      <li><a href="#">Lahore</a></li>
+                      <li><a href="#">New York</a></li>
+                      <li><a href="#">Delhi</a></li>
+                      <li><a href="#">Mumbai</a></li>
+                    </ul>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default confirm-source">Confirm</button>
+              </div>
+            </div>
+        
+          </div>
+        </div>
+      <script>
+      $(document).ready(function(){
+        $( "#datepicker" ).datepicker();
+        $(".user-post-profile-img").click(function(){
+          window.location = "./user-profile.html";
+        });
       });
-    </script>
-    <script src="./scripts/popup.js"></script>
+      </script>
+    <script src="scripts/custom.js"></script>
+    <script src="scripts/popup.js"></script>
+
   </body>
 </html>
